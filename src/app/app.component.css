@@ -1,0 +1,15 @@
+.left-nav {
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    background: #45b97c;
+    opacity: .5;
+}
+
+.left-nav ul li a {
+    color: #FFF;
+    font-size: 24px;
+}
