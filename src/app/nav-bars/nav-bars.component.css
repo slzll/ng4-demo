@@ -1,0 +1,52 @@
+.nav-tabs > li > a {
+    color: #000;
+    font-size: 18px;
+}
+.nav-tabs{border:none;}
+.nav > li > a:hover, .nav > li > a:focus {
+    border-color: transparent;
+    background-color: transparent;
+}
+.nav-tabs > li.active > a{border:none;}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #000;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #e00000;
+}
+
+.navbg {
+    height:131px;
+    width:100%;
+}
+.navbg .count_con{
+    text-align: right;
+    padding-right: 17%;
+}
+
+.navbg .count{
+    height:21px;
+    background:#e20000;
+    color:#fff;
+    width:100%;
+}
+.navbg .count .span2{
+    margin-left:52px;
+}
+.navbg .count .span3{
+    margin-right:52px;
+}
+.nav_div{
+    height:110px;
+    /*background: url("nav_bg.png") no-repeat left 18px;*/
+    width:1020px;
+    margin:0 auto;
+}
+.nav_div ul{
+    float: right;
+    margin-top:60px;
+}
+.nav_div ul li{
+    float: left;
+}
+.navbg_con{width:1020px;margin:0 auto;}

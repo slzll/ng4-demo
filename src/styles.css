@@ -1,19 +1,1207 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/
 
+  Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+
+body {
+    min-width: 1020px;
+}
+
+/* `Container
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1020px;
+}
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_7_2,
+.grid_8,
+.grid_8_2,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16,
+.grid_16_2,
+.grid_17,
+.grid_18,
+.grid_19,
+.grid_20,
+.grid_21,
+.grid_22,
+.grid_23,
+.grid_24 {
+    display: inline;
+    float: left;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11,
+.push_12, .pull_12,
+.push_13, .pull_13,
+.push_14, .pull_14,
+.push_15, .pull_15,
+.push_16, .pull_16,
+.push_17, .pull_17,
+.push_18, .pull_18,
+.push_19, .pull_19,
+.push_20, .pull_20,
+.push_21, .pull_21,
+.push_22, .pull_22,
+.push_23, .pull_23 {
+    position: relative;
+}
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+    margin-left: 0;
+}
+
+.omega {
+    margin-right: 0;
+}
+
+/* `Grid >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 .grid_1 {
+    width: 42.5px;
+}
+
+.container_24 .grid_2 {
+    width: 85px;
+}
+
+.container_24 .grid_3 {
+    width: 127.5px;
+}
+
+.container_24 .grid_4 {
+    width: 170px;
+}
+
+.container_24 .grid_5 {
+    width: 212.5px;
+}
+
+.container_24 .grid_6 {
+    width: 255px;
+}
+
+.container_24 .grid_7 {
+    width: 297.5px;
+}
+.container_24 .grid_7_2 {
+    width: 326.168px;
+}
+
+.container_24 .grid_8 {
+    width: 340px;
+}
+.container_24 .grid_8_2 {
+    width: 330px;
+}
+
+.container_24 .grid_9 {
+    width: 382.5px;
+}
+
+.container_24 .grid_10 {
+    width: 425px;
+}
+
+.container_24 .grid_11 {
+    width: 467.5px;
+}
+
+.container_24 .grid_12 {
+    width: 510px;
+}
+
+.container_24 .grid_13 {
+    width: 552.5px;
+}
+
+.container_24 .grid_14 {
+    width: 595px;
+}
+
+.container_24 .grid_15 {
+    width: 637.5px;
+}
+
+.container_24 .grid_16 {
+    width: 680px;
+}
+.container_24 .grid_16_2 {
+    width: 730px;
+}
+
+.container_24 .grid_17 {
+    width: 722.5px;
+}
+
+.container_24 .grid_18 {
+    width: 765px;
+}
+
+.container_24 .grid_19 {
+    width: 807.5px;
+}
+
+.container_24 .grid_20 {
+    width: 850px;
+}
+
+.container_24 .grid_21 {
+    width: 892.5px;
+}
+
+.container_24 .grid_22 {
+    width: 935px;
+}
+
+.container_24 .grid_23 {
+    width: 977.5px;
+}
+
+.container_24 .grid_24 {
+    width: 1020px;
+}
+
+/* `Prefix Extra Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 .prefix_1 {
+    padding-left: 40px;
+}
+
+.container_24 .prefix_2 {
+    padding-left: 80px;
+}
+
+.container_24 .prefix_3 {
+    padding-left: 120px;
+}
+
+.container_24 .prefix_4 {
+    padding-left: 160px;
+}
+
+.container_24 .prefix_5 {
+    padding-left: 200px;
+}
+
+.container_24 .prefix_6 {
+    padding-left: 240px;
+}
+
+.container_24 .prefix_7 {
+    padding-left: 280px;
+}
+
+.container_24 .prefix_8 {
+    padding-left: 320px;
+}
+
+.container_24 .prefix_9 {
+    padding-left: 360px;
+}
+
+.container_24 .prefix_10 {
+    padding-left: 400px;
+}
+
+.container_24 .prefix_11 {
+    padding-left: 440px;
+}
+
+.container_24 .prefix_12 {
+    padding-left: 480px;
+}
+
+.container_24 .prefix_13 {
+    padding-left: 520px;
+}
+
+.container_24 .prefix_14 {
+    padding-left: 560px;
+}
+
+.container_24 .prefix_15 {
+    padding-left: 600px;
+}
+
+.container_24 .prefix_16 {
+    padding-left: 640px;
+}
+
+.container_24 .prefix_17 {
+    padding-left: 680px;
+}
+
+.container_24 .prefix_18 {
+    padding-left: 720px;
+}
+
+.container_24 .prefix_19 {
+    padding-left: 760px;
+}
+
+.container_24 .prefix_20 {
+    padding-left: 800px;
+}
+
+.container_24 .prefix_21 {
+    padding-left: 840px;
+}
+
+.container_24 .prefix_22 {
+    padding-left: 880px;
+}
+
+.container_24 .prefix_23 {
+    padding-left: 920px;
+}
+
+/* `Suffix Extra Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 .suffix_1 {
+    padding-right: 40px;
+}
+
+.container_24 .suffix_2 {
+    padding-right: 80px;
+}
+
+.container_24 .suffix_3 {
+    padding-right: 120px;
+}
+
+.container_24 .suffix_4 {
+    padding-right: 160px;
+}
+
+.container_24 .suffix_5 {
+    padding-right: 200px;
+}
+
+.container_24 .suffix_6 {
+    padding-right: 240px;
+}
+
+.container_24 .suffix_7 {
+    padding-right: 280px;
+}
+
+.container_24 .suffix_8 {
+    padding-right: 320px;
+}
+
+.container_24 .suffix_9 {
+    padding-right: 360px;
+}
+
+.container_24 .suffix_10 {
+    padding-right: 400px;
+}
+
+.container_24 .suffix_11 {
+    padding-right: 440px;
+}
+
+.container_24 .suffix_12 {
+    padding-right: 480px;
+}
+
+.container_24 .suffix_13 {
+    padding-right: 520px;
+}
+
+.container_24 .suffix_14 {
+    padding-right: 560px;
+}
+
+.container_24 .suffix_15 {
+    padding-right: 600px;
+}
+
+.container_24 .suffix_16 {
+    padding-right: 640px;
+}
+
+.container_24 .suffix_17 {
+    padding-right: 680px;
+}
+
+.container_24 .suffix_18 {
+    padding-right: 720px;
+}
+
+.container_24 .suffix_19 {
+    padding-right: 760px;
+}
+
+.container_24 .suffix_20 {
+    padding-right: 800px;
+}
+
+.container_24 .suffix_21 {
+    padding-right: 840px;
+}
+
+.container_24 .suffix_22 {
+    padding-right: 880px;
+}
+
+.container_24 .suffix_23 {
+    padding-right: 920px;
+}
+
+/* `Push Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 .push_1 {
+    left: 40px;
+}
+
+.container_24 .push_2 {
+    left: 80px;
+}
+
+.container_24 .push_3 {
+    left: 120px;
+}
+
+.container_24 .push_4 {
+    left: 160px;
+}
+
+.container_24 .push_5 {
+    left: 200px;
+}
+
+.container_24 .push_6 {
+    left: 240px;
+}
+
+.container_24 .push_7 {
+    left: 280px;
+}
+
+.container_24 .push_8 {
+    left: 320px;
+}
+
+.container_24 .push_9 {
+    left: 360px;
+}
+
+.container_24 .push_10 {
+    left: 400px;
+}
+
+.container_24 .push_11 {
+    left: 440px;
+}
+
+.container_24 .push_12 {
+    left: 480px;
+}
+
+.container_24 .push_13 {
+    left: 520px;
+}
+
+.container_24 .push_14 {
+    left: 560px;
+}
+
+.container_24 .push_15 {
+    left: 600px;
+}
+
+.container_24 .push_16 {
+    left: 640px;
+}
+
+.container_24 .push_17 {
+    left: 680px;
+}
+
+.container_24 .push_18 {
+    left: 720px;
+}
+
+.container_24 .push_19 {
+    left: 760px;
+}
+
+.container_24 .push_20 {
+    left: 800px;
+}
+
+.container_24 .push_21 {
+    left: 840px;
+}
+
+.container_24 .push_22 {
+    left: 880px;
+}
+
+.container_24 .push_23 {
+    left: 920px;
+}
+
+/* `Pull Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 .pull_1 {
+    left: -40px;
+}
+
+.container_24 .pull_2 {
+    left: -80px;
+}
+
+.container_24 .pull_3 {
+    left: -120px;
+}
+
+.container_24 .pull_4 {
+    left: -160px;
+}
+
+.container_24 .pull_5 {
+    left: -200px;
+}
+
+.container_24 .pull_6 {
+    left: -240px;
+}
+
+.container_24 .pull_7 {
+    left: -280px;
+}
+
+.container_24 .pull_8 {
+    left: -320px;
+}
+
+.container_24 .pull_9 {
+    left: -360px;
+}
+
+.container_24 .pull_10 {
+    left: -400px;
+}
+
+.container_24 .pull_11 {
+    left: -440px;
+}
+
+.container_24 .pull_12 {
+    left: -480px;
+}
+
+.container_24 .pull_13 {
+    left: -520px;
+}
+
+.container_24 .pull_14 {
+    left: -560px;
+}
+
+.container_24 .pull_15 {
+    left: -600px;
+}
+
+.container_24 .pull_16 {
+    left: -640px;
+}
+
+.container_24 .pull_17 {
+    left: -680px;
+}
+
+.container_24 .pull_18 {
+    left: -720px;
+}
+
+.container_24 .pull_19 {
+    left: -760px;
+}
+
+.container_24 .pull_20 {
+    left: -800px;
+}
+
+.container_24 .pull_21 {
+    left: -840px;
+}
+
+.container_24 .pull_22 {
+    left: -880px;
+}
+
+.container_24 .pull_23 {
+    left: -920px;
+}
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after,
+.container_24:before,
+.container_24:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:after,
+.container_24:after {
+    clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix,
+.container_24 {
+    zoom: 1;
+}
+
+
+
+
+
+/*cssreset*/
 * {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #62a3db;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* `XHTML, HTML4, HTML5 Reset
+----------------------------------------------------------------------------------------------------*/
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
     margin: 0;
     padding: 0;
 }
 
-a {
-    text-decoration: none;
+html{
+    height: 100%;
 }
 
-a:hover {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    /*
+      Override the default (display: inline) for
+      browsers that do not recognize HTML5 tags.
+
+      IE8 (and lower) requires a shiv:
+      http://ejohn.org/blog/html5-shiv
+    */
+    display: block;
+}
+
+b,
+strong {
+    /*
+      Makes browsers agree.
+      IE + Opera = font-weight: bold.
+      Gecko + WebKit = font-weight: bolder.
+    */
+    font-weight: bold;
+}
+
+img {
+    color: transparent;
+    font-size: 0;
+    vertical-align: middle;
+    border:0px;
+    /*
+      For IE.
+      http://css-tricks.com/ie-fix-bicubic-scaling-for-images
+    */
+    -ms-interpolation-mode: bicubic;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+li {
+    /*
+      For IE6 + IE7:
+
+      "display: list-item" keeps bullets from
+      disappearing if hasLayout is triggered.
+    */
+    display: list-item;
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th,
+td,
+caption {
+    font-weight: normal;
+}
+
+q {
+    quotes: none;
+}
+
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+sub,
+sup,
+small {
+    font-size: 75%;
+}
+
+sub,
+sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+svg {
+    /*
+      For IE9. Without, occasionally draws shapes
+      outside the boundaries of <svg> rectangle.
+    */
+    overflow: hidden;
+}
+
+/*公共样式*/
+body {
+    /* background: url("../images/big_bg.png") center top;*/
+    font-family: "Microsoft YaHei","黑体","宋体";
+}
+.container_24{background-color: #fff}
+a.btn {
+    color: #fff;
+}
+h4 {
+    font-size: 16px;
+    /*font-weight: bold;*/
+}
+/*页面最外部容器*/
+.bigOuter {
+    /* width:1080px;*/
+    margin: 0 auto;
+    background-color: #fff;
+}
+/*颜色*/
+.blue {  color: #e20000;  }
+.green {  color: #e20000;  }
+.cyan {  color: #e20000;  }
+.red {color: #e20000}
+/*模块头部公用样式*/
+.com-header {
+    height: 40px;
+    border-radius: 8px 0 0 0;
+    margin-left: 10px;
+}
+.com-header h4{
+    color: #fff;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.com-header a.pull-right {
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    padding-right: 10px;
+}
+.com-header-green {
+    background-color: #e20000;
+}
+.com-header-blue {
+    background-color: #e20000;
+}
+.com-header-cyan {
+    background-color: #e20000;
+}
+
+/*课程分类头部1*/
+.titlebg .txt {
+    width: 100%;
+    line-height: 49px;
+    text-indent: 49px;
+    font-size: 20px;
     color: #000;
 }
+.tag {
+    margin-left: 30px;
+    float: left;
+    padding: 10px 5px 10px 0;
+}
+.tag span {
+    padding-left: 10px;
+}
+.tag a {
+    margin-left: 5px;
+}
+/*课程分类头部2*/
+.titlebg2 .txt {
+    height: 45px;
+    color: #666;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    border-bottom: 2px solid #ce0e08;
+}
+/*路径导航通用样式*/
+.breadcrumb {
+}
+.datebg {
+    background: url("assets/images/datePicker.gif") no-repeat right;
+}
+.breadcrumb .currentPosition{
+    color: #000;
+    padding-left: 25px;
+    background: url("assets/images/link.gif") 0 2px no-repeat;
+}
+.formCourse{
+    margin-left: 40px;
+}
+.formCourse .form-control ,.formCourse .btn.btn-default{
+    height: 26px;
+}
+.formCourse select.form-control{
+    padding: 0;
+}
+.formCourse .btn.btn-default{
+    padding:2px 15px;
+}
 
-body {
-    background: url('assets/images/background.jpg') no-repeat top left;
-    background-size: cover;
+/*模板通用边框*/
+.tmBorder-green {
+    border:1px solid #ddd;
+    border-top:6px  solid #e20000;
+}
+.tmBorder-blue {
+    border:1px solid #ddd;
+    border-top:6px  solid #e20000;
+}
+.tmBorder-cyan {
+    border:1px solid #ddd;
+    border-top:6px  solid #e20000;
+}
+h4.title-h4{
+    line-height: 52px;
+    text-align: center;
+}
+/*圆点*/
+.dian {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #000;
+}
+/*星星*/
+.star {
+    overflow: hidden;
+    cursor: pointer;
+    width: 121px;
+    height: 18px;
+    margin-right: 14px;
+    /*float: left;*/
+    background: url("assets/images/star_all.gif") 0 0 no-repeat;
+}
+/*
+ *星级评论
+ */
+.my-stars-list{
+    height: 34px;
+    line-height: 34px;
+    float: left;
+}
+.my-stars-items{
+    float: left;
+    cursor:pointer;
+    font-size:0;
+    width: 25px;
+    line-height: 25px;
+    height:25px;
+    background-image: url("assets/images/star_all_02.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.myStarHover.my-stars-items{
+    background-image: url("assets/images/star_all_04.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.myStarsSel.my-stars-items{
+    background-image: url("assets/images/star_all_04.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/*播放进度*/
+.jd_box {
+    display: inline-block;
+    border: 1px solid #cadc03;
+    width: 100px;
+    height: 15px;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+.jd_bg {
+    display: inline-block;
+    background: #7abc1d;
+    height: 15px;
+}
+/*标签页*/
+.myTab {
+    margin-top: 25px;
+    text-align: center;
+}
+.myTab ul.nav-tabs>li a {
+    color: #000;
+    width: auto;
+    padding: 10px 15px;
+    margin:0;
+    font-size: 16px;
+    font-weight: 500;
+    border:2px solid #eee;
+}
+.myTab ul.nav-tabs>li.active a {
+    color: #fff;
+    background-color: #e20000;
+    /*  border: 1px solid #6d9d85;*/
+    border-bottom-color: transparent;
+    text-align: center;
+}
+.myTab .perlist {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.myTab .perlist .title_bar span {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    line-height: 37px;
+}
+.myTab .perlist span a{
+    color: #666;
+}
+.myTab .perlist span a:hover{
+    color:#7abc1d;
+}
+.myTab .perlist .title_bar {
+    line-height: 30px;
+    font-weight: bold;
+    background: #EDF3FC;
+    color: #666;
+    border-bottom: 1px dashed #ccc;
+}
+.myTab .perlist .list{
+    border-bottom: 1px dashed #ccc;
+}
+.myTab .perlist .list:hover{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+.myTab .perlist .list span{
+    line-height: 37px;
+    float: left;
+}
+.myTab .perlist span a.fav{
+    margin-left: 10px;
+}
+
+.form-group input {
+    width: 400px;
+    padding: 0 0 0 12px;
+    height: 26px;
+    line-height: 26px;
+}
+/*placeholder*/
+.placeholder {
+    position: absolute;
+    /*float: right;*/
+    color: #aaa;
+    cursor: text;
+    z-index: 1;
+    /*left: 40px;*/
+}
+/*暂无数据*/
+.result{
+    color: #000;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 黑体;
+    text-align: center;
+    line-height: 250px;
+    /*margin-left: -250px;*/
+}
+/*margin*/
+.mar_top_5 {
+    margin-top: 5px;
+}
+.mar_top_10 {
+    margin-top: 10px;
+}
+.mar_top_12 {
+    margin-top: 12px;
+}
+.mar_top_15 {
+    margin-top: 15px;
+}
+.mar_top_20 {
+    margin-top: 20px;
+}
+.mar_top_34 {
+    margin-top: 34px;
+}
+.mar_left_10 {
+    margin-left:10px;
+}
+.mar_left_20 {
+    margin-left:20px;
+}
+.mar_left_24 {
+    margin-left:24px;
+}
+.mar_left_30 {
+    margin-left:30px;
+}
+.mar_right_10 {
+    margin-right:10px;
+}
+.mar_right_12 {
+    margin-right:12px;
+}
+.mar_bottom_20 {
+    margin-bottom:20px;
+}
+/*paddingleft*/
+.pad_left_10 {
+    padding-left: 10px;
+}
+.pad_left_15 {
+    padding-left: 15px;
+}
+.pad_left_16 {
+    padding-left: 16px;
+}
+.pad_left_20 {
+    padding-left: 20px;
+}
+.pad_left_35 {
+    padding-left: 35px;
+}
+.pad_right_10 {
+    padding-right: 10px;
+}
+.pad_right_15 {
+    padding-right: 15px;
+}
+.pad_right_20 {
+    padding-right: 20px;
+}
+.pad_right_30 {
+    padding-right: 30px;
+}
+
+
+.ajax-error{
+    background: url("assets/images/modulebaseload.gif") 50% 50% no-repeat;
 }

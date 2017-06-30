@@ -6,6 +6,6 @@ export class NG2StudyPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('app-root div')).getText();
   }
 }

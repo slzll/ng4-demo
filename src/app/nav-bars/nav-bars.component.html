@@ -1,0 +1,28 @@
+<div id="nav-bars" class="navbg">
+  <div class="count">
+    <div class="count_con" dw-loading="realTimeList">
+        <span>
+            在线学习人数:
+        </span>
+      <span>{{realTimeData.Model.OnlineUsersCount}}</span>
+      <span class="span2">
+            上线课程数量:
+        </span>
+      <span class="span3">{{realTimeData.Model.CourseCount}}</span>
+      <span>
+            访问学习次数:
+        </span>
+      <span>{{realTimeData.Model.UserVisitCount}}</span>
+    </div>
+  </div>
+  <div class="nav_div container_24_1020">
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a routerLink="/">首页</a></li>
+      <li role="presentation"><a routerLink="courseCenter">学习资源中心</a></li>
+      <li role="presentation"><a routerLink="personalCenter">个人学习中心</a></li>
+
+      <li role="presentation"><a routerLink="commonProblem/21">管理服务中心</a></li>
+    </ul>
+  </div>
+</div>
+
