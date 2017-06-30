@@ -11,6 +11,9 @@ import { PersonalCenterComponent } from './personal-center/personal-center.compo
 import { CommonProblemComponent } from './common-problem/common-problem.component';
 
 import { appRoute } from './app-route';
+import { MainComponent } from './main/main.component';
+import { NewCourseComponent } from './main/new-course/new-course.component';
+import { HeaderComponent } from './main/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { appRoute } from './app-route';
     NavBarsComponent,
     CourseCenterComponent,
     PersonalCenterComponent,
-    CommonProblemComponent
+    CommonProblemComponent,
+    MainComponent,
+    NewCourseComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

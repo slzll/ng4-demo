@@ -38,7 +38,7 @@
 }
 .nav_div{
     height:110px;
-    /*background: url("nav_bg.png") no-repeat left 18px;*/
+    background: url("../../assets/images/nav_bg.png") no-repeat left 18px;
     width:1020px;
     margin:0 auto;
 }

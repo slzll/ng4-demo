@@ -1,13 +1,13 @@
 import { CourseCenterComponent } from './course-center/course-center.component';
 import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { CommonProblemComponent } from './common-problem/common-problem.component';
+import { MainComponent } from './main/main.component';
 
 
 export const appRoute = [
     {
-        path: '',
-        redirectTo: '/',
-        pathMatch: 'full'
+        path: 'main',
+        component: MainComponent
     },
     {
         path: 'courseCenter',
@@ -20,5 +20,15 @@ export const appRoute = [
     {
         path: 'commonProblem',
         component: CommonProblemComponent
+    },
+    {
+        path: '',
+        redirectTo: '/main',
+        pathMatch: 'full'
+    },
+    {
+        path: '**',
+        redirectTo: '/main',
+        pathMatch: 'full'
     }
 ];
