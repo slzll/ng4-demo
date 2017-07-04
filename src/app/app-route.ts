@@ -22,6 +22,10 @@ export const appRoute = [
         component: CommonProblemComponent
     },
     {
+        path: 'courseDetails/:Id',
+        component: CommonProblemComponent
+    },
+    {
         path: '',
         redirectTo: '/main',
         pathMatch: 'full'

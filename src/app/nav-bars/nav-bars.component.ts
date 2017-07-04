@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 
+import { GlobalConfig } from '../global-config';
+
 @Component({
   selector: 'app-nav-bars',
   templateUrl: './nav-bars.component.html',
@@ -16,11 +18,10 @@ export class NavBarsComponent implements OnInit {
       UserVisitCount: 0
     }
   };
-  url = 'http://122.225.101.117:89/api/Page/LeftRealTimeData';
-  constructor(private http: Http ) { }
+  constructor(private http: Http) { }
 
   getData(): Promise<any> {
-    return this.http.get(this.url).toPromise().then(r => r.json().Data);
+    return this.http.get(GlobalConfig.ALL_PORT.LeftRealTimeData.url).toPromise().then(r => r.json().Data);
   }
 
   ngOnInit() {

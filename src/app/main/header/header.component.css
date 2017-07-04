@@ -1,0 +1,30 @@
+.topbg {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.topbg .carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.topbg .carousel-inner a {
+    width: 100%;
+    height: 400px;
+    margin: 0px auto;
+}
+
+.topbg a img {
+    width: 100%;
+    height: 400px !important;
+    margin: 0px auto;
+}
+
+a.left {
+    left: -5%;
+}
+
+a.right {
+    right: -5% !important;
+}

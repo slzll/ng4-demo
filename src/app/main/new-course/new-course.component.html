@@ -1,0 +1,23 @@
+<div id="course-center" class="course-center container_24 mar_top_20">
+    <div class="com-header">
+    </div>
+    <div class="course_tabs nav nav-tabs">
+        <div class="course_1" [ngClass]="{active: vmcourse.activeTab == 1}" (click)="vmcourse=1">
+            <a>必修课</a>
+        </div>
+        <div class="course_2" [ngClass]="{active: vmcourse.activeTab == 2}" (click)="vmcourse=2">
+            <a>选修课</a>
+        </div>
+    </div>
+    <div class="course_con tab-content">
+        <div class="tab-panel perlist" [hidden]="vmcourse !== 1">
+            <a *ngFor="let item of requiredCourseData" [routerLink]="['courseDetails',{Id:item.Id}]" target="_blank"><img title="{{item.Name}}" [src]="imgSource+'/'+item.Img" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+        </div>
+        <div class="tab-panel perlist" [hidden]="vmcourse !== 2">
+            <a *ngFor="let item of electivesCourseData" [routerLink]="['courseDetails',{Id:item.Id}]" target="_blank"><img title="{{item.Name}}" [src]="imgSource+'/'+item.Img" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+        </div>
+    </div>
+    <div class="more clearfix">
+        <a class="more-btn" routerLink="courseCenter" target="_blank">更 多</a>
+    </div>
+</div>

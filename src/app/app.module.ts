@@ -11,9 +11,12 @@ import { PersonalCenterComponent } from './personal-center/personal-center.compo
 import { CommonProblemComponent } from './common-problem/common-problem.component';
 
 import { appRoute } from './app-route';
+import { API } from './api';
+import { GlobalConfig } from './global-config';
 import { MainComponent } from './main/main.component';
 import { NewCourseComponent } from './main/new-course/new-course.component';
 import { HeaderComponent } from './main/header/header.component';
+import { ErrSrcDirective } from './directive/err-src.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { HeaderComponent } from './main/header/header.component';
     CommonProblemComponent,
     MainComponent,
     NewCourseComponent,
-    HeaderComponent
+    HeaderComponent,
+    ErrSrcDirective
   ],
   imports: [
     BrowserModule,
