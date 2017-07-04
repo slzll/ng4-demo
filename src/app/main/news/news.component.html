@@ -1,0 +1,94 @@
+<!--新闻资讯-->
+<div id="news-information" class="tmNewsInformation container_24 mar_top_20">
+  <div class="com-header">
+  </div>
+  <div class="news-content">
+    <!--左侧的图片轮播-->
+    <div class="left-info">
+      <div id="carousel-special-training" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-special-training" data-slide-to="0" class="active"></li>
+          <li *ngFor="let photoData of photoData;let index=index" data-target="#carousel-special-training" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item clearfix active">
+            <a target="_blank" (click)="newsDetail('/articleDetail',activePhotoData.Id)" ref="">
+              <img class="item clearfix" [src]="path+'/'+(activePhotoData)?.Img" [ErrSrc]="'assets/images/notFound.jpeg'">
+              <div class="carousel-caption">
+                {{(activePhotoData)?.Name}}
+              </div>
+            </a>
+          </div>
+          <div class="item clearfix" *ngFor="let item of photoData">
+            <a target="_blank" (click)="newsDetail('/articleDetail',activePhotoData.Id)">
+              <img  [src]="path+'/'+(item)?.Img" [ErrSrc]="'assets/images/notFound.jpeg'">
+              <div class="carousel-caption">
+                {{(item)?.Name}}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--中间的图片-->
+    <div class="middle-info">
+      <img src="assets/images/middle.png" alt="">
+    </div>
+    <!--右侧的列表-->
+    <div class="right-info">
+      <div>
+        <ul class="nav nav-tabs">
+
+          <li [ngClass]="{active: vmnews == 1}">
+            <span (click)="vmnews=1" title="{{newsTitle}}">{{newsTitle}}</span>
+          </li>
+          <li [ngClass]="{active: vmnews == 2}">
+            <span (click)="vmnews=2" title="{{noticeTitle}}">{{noticeTitle}}</span>
+          </li>
+          <li [ngClass]="{active: vmnews == 3}">
+            <span (click)="vmnews=3" title="{{policyTitle}}">{{policyTitle}}</span>
+          </li>
+        </ul>
+
+        <p class="more">
+          <a [routerLink]="['commonProblem',{CategoryId:newsId}]" target="_blank" [hidden]="vmnews !== 1">更多</a>
+          <a routerLink="noticemore" target="_blank" [hidden]="vmnews !== 2">更多</a> <!-- 通知公告 -->
+          <a [routerLink]="['commonProblem',{CategoryId:policyId}]" target="_blank" [hidden]="vmnews !== 3">更多</a>  <!-- 政策法规 -->
+        </p>
+
+      </div>
+
+      <div class="tab-content">
+        <div  class="tab-panel perlist" [hidden]="vmnews !== 1">
+          <div class="first-news">
+            <p class="title" title="{{(activeNewsData)?.Name}}">{{(activeNewsData)?.Name}}</p>
+            <p class="content">{{(activeNewsData)?.Description|timeLimit:'55'}}<a target="_blank" (click)="newsDetail('/articleDetail',activeNewsData.Id)" [hidden]="!(activeNewsData)?.Name">[显示全文]</a></p>
+          </div>
+          <ul class="news" *ngFor="let item of newsData">
+            <li title="{{(item)?.Name}}"><span class="dian"></span><a target="_blank" (click)="newsDetail('articleDetail',item.Id)">{{item.Name}}</a><span class="new" [hidden]="!isNew((item)?.CreateDate)"></span><span class="time">{{item.CreateDate | dateFilter | date:'yyyy-MM-dd'}}</span></li>
+          </ul>
+        </div>
+        <div  class="tab-panel perlist" [hidden]="vmnews !== 2">
+          <div class="first-news">
+            <p class="title" title="{{(activeNoticeData)?.Name}}">{{(activeNoticeData)?.Name}}</p>
+            <p class="content">{{(activeNoticeData)?.Name|timeLimit:'55'}}<a target="_blank" (click)="newsDetail('noticeDetail',activeNoticeData.Id)" [hidden]="!(activeNoticeData)?.Name">[显示全文]</a> </p>
+          </div>
+          <ul class="news" *ngFor="let item of noticeData">
+            <li title="{{(item)?.Name}}"><span class="dian"></span><a target="_blank"  (click)="newsDetail('articleDetail',item.Id)">{{item.Name}}</a><span class="new"  [hidden]="isNew((item)?.CreateDate)"></span><span class="time">{{item.CreateDate | dateFilter | date:'yyyy-MM-dd'}}</span></li>
+          </ul>
+        </div>
+        <div  class="tab-panel perlist" [hidden]="vmnews !== 3">
+          <div class="first-news">
+            <p class="title" title="{{(activePolicyData)?.Name}}">{{(activePolicyData)?.Name}}</p>
+            <p class="content">{{(activePolicyData)?.Description|timeLimit:'55'}}<a target="_blank" (click)="newsDetail('articleDetail',activePolicyData.Id)" [hidden]="!(activePolicyData)?.Name">[显示全文]</a></p>
+          </div>
+          <ul class="news" *ngFor="let item of policyData">
+            <li title="{{(item)?.Name}}"><span class="dian"></span><a target="_blank" (click)="newsDetail('articleDetail',item.Id)">{{item.Name}}</a><span class="new" [hidden]="isNew((item)?.CreateDate)"></span><span class="time">{{item.CreateDate | dateFilter | date:'yyyy-MM-dd'}}</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

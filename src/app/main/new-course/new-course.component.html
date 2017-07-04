@@ -2,10 +2,10 @@
     <div class="com-header">
     </div>
     <div class="course_tabs nav nav-tabs">
-        <div class="course_1" [ngClass]="{active: vmcourse.activeTab == 1}" (click)="vmcourse=1">
+        <div class="course_1" [ngClass]="{active: vmcourse == 1}" (click)="vmcourse=1">
             <a>必修课</a>
         </div>
-        <div class="course_2" [ngClass]="{active: vmcourse.activeTab == 2}" (click)="vmcourse=2">
+        <div class="course_2" [ngClass]="{active: vmcourse == 2}" (click)="vmcourse=2">
             <a>选修课</a>
         </div>
     </div>

@@ -1,0 +1,104 @@
+.training-program .com-header{
+    margin:20px 0 15px 0;
+    height: 64px;
+    background:url("../../../assets/images/TrainingProgram.png") no-repeat center top;
+}
+.training-program .training-program-content{
+    height: 322px;
+}
+.training-program-content .first,.third,.second>div{
+    float: left;
+    position: relative;
+}
+.training-program-content .second>div{
+    margin-left: 2px;
+}
+.training-program-content img{
+    margin-top: 2px;
+}
+.training-program-content .first-left{
+    width:73%;
+}
+.training-program-content .first-right{
+    width:27%;
+}
+.training-program-content .third-left{
+    width:39%;
+}
+.training-program-content .third-right{
+    width:60%;
+}
+.training-program-content .forth{
+    position: relative;
+    left: -25%;
+    float: left;
+    width: 244px;
+    height: 112px;
+    background: url('../../../assets/images/tp_bg_6.png');
+}
+.forth>div{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.training-program .more{
+    text-align: center;
+    clear: both;
+}
+.training-program .more .more-btn{
+    display: inline-block;
+    font-family: 黑体;
+    font-size: 14px;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    background: #fff;
+    margin: 20px 0 20px 0;
+}
+.training-program-content p{
+    font-family: 黑体 Sans-Serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    padding: 5px 45px;
+    letter-spacing: 3px;
+}
+.one{
+    background: url('../../../assets/images/tp_bg_1.png');
+    width:290px;
+    height: 105px;
+}
+.one>div{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.two{
+    background: url('../../../assets/images/tp_bg_3.png');
+    width:155px;
+    height: 105px;
+}
+.three{
+    float:left;
+    background:url('../../../assets/images/tp_bg_5.png');
+    width: 55%;
+    height: 105px;
+    position: relative;
+}
+.three>div{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.four{
+    float:left;
+    background:url('../../../assets/images/tp_bg_7.png');
+    width: 44%;
+    height: 105px;
+    position: relative;
+    margin-left: 2px;
+}
+.first-right div{
+    position: relative;
+    left: 100px;
+    top: 45px;
+}

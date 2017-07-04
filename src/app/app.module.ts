@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
@@ -17,6 +17,12 @@ import { MainComponent } from './main/main.component';
 import { NewCourseComponent } from './main/new-course/new-course.component';
 import { HeaderComponent } from './main/header/header.component';
 import { ErrSrcDirective } from './directive/err-src.directive';
+import { NewsComponent } from './main/news/news.component';
+import { TimeLimitPipe } from './pipe/time-limit.pipe';
+import { DateFilterPipe } from './pipe/date-filter.pipe';
+import { SpecialTrainingComponent } from './main/special-training/special-training.component';
+import { TrainingProgramComponent } from './main/training-program/training-program.component';
+import { StatisticalRankingComponent } from './main/statistical-ranking/statistical-ranking.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +34,18 @@ import { ErrSrcDirective } from './directive/err-src.directive';
     MainComponent,
     NewCourseComponent,
     HeaderComponent,
-    ErrSrcDirective
+    ErrSrcDirective,
+    NewsComponent,
+    TimeLimitPipe,
+    DateFilterPipe,
+    SpecialTrainingComponent,
+    TrainingProgramComponent,
+    StatisticalRankingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     JsonpModule,
     RouterModule.forRoot(appRoute)

@@ -1,0 +1,50 @@
+<!--统计排行-->
+<div id="statistical-ranking" class="statistical-ranking  container_24 mar_top_20">
+  <div class="com-header"></div>
+  <div class="ranking-list course-ranking">
+    <div class="title">
+      <div><span>&nbsp;&nbsp;</span>课程排行</div>
+      <p class="more"><a routerLink="courseRankingList" target="_blank">更多</a></p>
+    </div>
+    <p class="title">
+      <span class="list1">排名</span>
+      <span class="list2">课程名称</span>
+      <span class="list3">点击次数</span>
+    </p>
+    <ul class="perList" *ngFor="let item of courseRankData;let $index=index" repeat-finish="courseRepeatDone()">
+      <li class="list1">{{$index+1}}</li>
+      <li class="list2" title="{{item.Name}}"><a routerLink="courseDetails({Id:item.Id})">{{item.Name}}</a></li>
+      <li class="list3"><span class="progressBar{{$index+1}} courseProgressBar">{{item.Total}}</span></li>
+    </ul>
+  </div>
+  <div class="ranking-list unit-ranking">
+    <div class="title">
+      <div><span>&nbsp;</span>单位排行</div>
+      <p class="more"><a routerLink="unitRankingList" target="_blank">更多</a></p>
+    </div>
+    <p class="title">
+      <span class="list4">单位名称</span>
+      <span class="list4">人均学时</span>
+    </p>
+    <ul class="perList" *ngFor="let item of unitRankData;let $index=index"  repeat-finish="unitRepeatDone()">
+      <li class="list4" title="{{item.DepartmentName}}">{{item.DepartmentName}}</li>
+      <li class="list4"><span  class="progressBar{{$index+1}} unitProgressBar">{{item.Average}}</span></li>
+    </ul>
+  </div>
+  <div class="ranking-list student-ranking">
+    <div class="title">
+      <div><span>&nbsp;</span>学员排行</div>
+      <p class="more"><a routerLink="userRankingList" target="_blank">更多</a></p>
+    </div>
+    <p class="title">
+      <span class="list1">排名</span>
+      <span class="list2">学员姓名</span>
+      <span class="list3">学习学时</span>
+    </p>
+    <ul class="perList" *ngFor="let item of userRankData;let $index=index"  repeat-finish="studentRepeatDone()">
+      <li class="list1">{{$index+1}}</li>
+      <li class="list2">{{item.UserName}}</li>
+      <li class="list3"><span  class="progressBar{{$index+1}} studentProgressBar">{{item.Credit}}</span></li>
+    </ul>
+  </div>
+</div>

@@ -26,6 +26,34 @@ export const appRoute = [
         component: CommonProblemComponent
     },
     {
+        path: 'articleDetail/:ID',
+        component: CommonProblemComponent
+    },
+    {
+        path: 'noticeDetail/:ID',
+        component: CommonProblemComponent
+    },
+    {
+        path: 'specialTrainingCourse',
+        component: CommonProblemComponent
+    },
+    {
+        path: 'trainingProgram',
+        component: CommonProblemComponent
+    },
+    {
+        path: 'courseRankingList',
+        component: CommonProblemComponent
+    },
+    {
+        path: 'unitRankingList',
+        component: CommonProblemComponent
+    },
+    {
+        path: 'userRankingList',
+        component: CommonProblemComponent
+    },
+    {
         path: '',
         redirectTo: '/main',
         pathMatch: 'full'

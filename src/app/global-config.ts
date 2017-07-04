@@ -20,17 +20,17 @@ export const GlobalConfig = {
         KeepOnline: {
             url: API.API_URL + "/Page/KeepOnline"
         },
-        //文章分类
+        // 文章分类
         ArticleCategory: {
             url: API.API_URL + "/Page/ArticleCategory",
             data: { titleNav: '文章分类', sort: 'Sort', order: 'desc' }
         },
-        //新闻
+        // 新闻
         ArticleList: {
             url: API.API_URL + "/Page/ArticleList",
             data: { sort: 'Sort', order: 'desc', wordLimt: '20' }
         },
-        //新闻内容
+        // 新闻内容
         ArticleContent: {
             url: API.API_URL + "/Page/ArticleContent",
             data: {}
@@ -40,43 +40,43 @@ export const GlobalConfig = {
             url: API.API_URL + "/Page/ArticleCarousel",
             data: { page: 1, rows: 5, sort: 'Id', order: 'desc', ids: '32', wordLimt: 28, img: true }
         },
-        //通知公告
+        // 通知公告
         noticeAnnouncement: {
             url: API.API_URL + "/Page/LeftNotice",
             data: { page: '1', rows: '4', sort: 'Sort', order: 'desc', wordLimt: '15' }
         },
-        //通知通告分页
+        // 通知通告分页
         NoticeList: {
             url: API.API_URL + "/Page/NoticeList",
             data: { page: '1', rows: '9', sort: 'Sort', order: 'desc', titleNav: '通告列表', wordLimt: '35' }
         },
 
-        //通知内容
+        // 通知内容
         noticeContent: {
             url: API.API_URL + "/Page/NoticeContent",
             data: { Id: '', titleNav: '通知内容' }
         },
-        //友情链接
+        // 友情链接
         Blogroll: {
             url: API.API_URL + "/Page/Blogroll",
             data: {}
         },
-        //培训课程
+        // 培训课程
         TrainingClass: {
             url: API.API_URL + "/Page/TrainingClass",
             data: { sort: 'Id', order: 'desc' }
         },
-        //请求用户信息
+        // 请求用户信息
         LoginShort: {
             url: API.API_URL + "/Page/LoginShort",
             data: {}
         },
-        //防伪造请求
+        // 防伪造请求
         AntiForgeryToken: {
             url: API.API_URL + "/Page/AntiForgeryToken",
             data: {}
         },
-        //用户退出
+        // 用户退出
         LoginOut: {
             url: API.API_URL + "/Page/LoginOut",
             data: {}
@@ -86,37 +86,37 @@ export const GlobalConfig = {
             url: API.API_URL + "/Page/KickOut",
             data: {}
         },
-        //点击登陆（没有记住密码）
+        // 点击登陆（没有记住密码）
         LoginMe: {
             url: API.API_URL + "/Page/LoginMe",
             data: {}
         },
-        //点击登陆（记住密码）
+        // 点击登陆（记住密码）
         LoginCode: {
             url: API.API_URL + "/Page/LoginCode",
             data: {}
         },
-        //记住密码
+        // 记住密码
         GetLoginName: {
             url: API.API_URL + "/Page/GetLoginName",
             data: {}
         },
-        //单位排行
+        // 单位排行
         LeftGroupRank: {
             url: API.API_URL + "/Page/LeftGroupRank",
             data: { page: 1, rows: 10, sort: "AvgCredit", order: "desc", titleNav: '单位排行', wordLimt: 9 }
         },
-        //单位排行
+        // 单位排行
         RankGroupList: {
             url: API.API_URL + "/Page/RankGroupList",
             data: { page: 1, rows: 15, sort: "AvgCredit", order: "desc", titleNav: '单位排行', wordLimt: 9 }
         },
-        //实时数据
+        // 实时数据
         LeftRealTimeData: {
             url: API.API_URL + "/Page/LeftRealTimeData",
             data: {}
         },
-        //课程分类
+        // 课程分类
         CourseCategory: {
             url: API.API_URL + "/Page/CourseCategory",
             data: { titleNav: "课程分类", sort: 'Sort', order: 'Desc', title: '' }
@@ -125,143 +125,143 @@ export const GlobalConfig = {
             url: API.API_URL + "/Page/GetCourseList",
             data: { channelIds: "112" }
         },
-        //课程列表
+        // 课程列表
         CourseList: {
             url: API.API_URL + "/Page/CourseList",
             data: {}
         },
-        //课程点击排行
+        // 课程点击排行
         CourseClickRank: {
             url: API.API_URL + "/Page/CourseClickRank",
             data: { page: 1, rows: 10, sort: 'ClickCount', order: 'desc', courseType: 'All', flag: 'All', titleNav: '课程排行', wordLimt: 35 }
         },
-        //课程点击排行
+        // 课程点击排行
         CourseClickList: {
             url: API.API_URL + "/Page/CourseClickList",
             data: { page: 1, rows: 15, sort: 'ClickCount', order: 'desc', titleNav: '课程排行', wordLimt: 17 }
         },
-        //批量选课
+        // 批量选课
         AddStudyCourse: {
             url: API.API_URL + "/Page/AddStudyCourse",
             data: { checkValue: '' }
         },
-        //个人中心个人信息
+        // 个人中心个人信息
         LoginLong: {
             url: API.API_URL + "/Page/LoginLong",
             data: {}
         },
-        //学员学时排行
+        // 学员学时排行
         LeftUserRank: {
             url: API.API_URL + "/Page/LeftUserRank",
             data: { page: 1, rows: 10, sort: 'TotalCredit', order: 'desc', titleNav: "学员学时排行", wordLimt: 6 }
         },
-        //学员排行
+        // 学员排行
         RankUserList: {
             url: API.API_URL + "/Page/RankUserList",
             data: { page: 1, rows: 15, sort: 'TotalCredit', order: 'desc', titleNav: "学员排行" }
         },
-        //个人中心课程
+        // 个人中心课程
         MyCenter: {
             url: API.API_URL + "/Page/MyCenter",
             data: { page: 1, rows: 10, sort: 'BrowseScore', order: 'desc', titleNav: "个人中心", courseType: "Unfinish", title: "" }
         },
-        //考试中心列表
+        // 考试中心列表
         ExamList: {
             url: API.API_URL + "/Page/ExamList",
             data: { page: 1, rows: 5, sort: 'Id', order: 'desc', titleNav: "考试中心", examType: "All", title: "" }
         },
-        //专题培训班分类
+        // 专题培训班分类
         GetTrainingClassTypeList: {
             url: API.API_URL + "/Page/GetTrainingClassTypeList",
             data: { titleNav: "培训班分类", sort: 'Sort', order: 'Desc' }
         },
-        //我的班级
+        // 我的班级
         ClassMy: {
             url: API.API_URL + "/Page/ClassMy",
             data: { page: 1, rows: 7, sort: 'Id', order: 'desc', titleNav: "我的班级", title: "" }
         },
-        //获取培训列表
+        // 获取培训列表
         GetClassList: {
             url: API.API_URL + "/Page/GetClassList",
             data: { page: 1, rows: 10, sort: 'Id', order: 'desc', title: "", type: "just", categoryId: 0 }
         },
-        //课程详情
+        // 课程详情
         CourseContent: {
             url: API.API_URL + "/Page/CourseContent",
             data: { Id: '', titleNav: '课程详情' }
         },
-        //学习统计
+        // 学习统计
         MyStudyStat: {
             url: API.API_URL + "/Page/MyStudyStat",
             data: { page: 1, rows: 10, sort: 'Id', order: 'desc', titleNav: '学习统计' }
         },
-        //考试统计
+        // 考试统计
         MyExamStat: {
             url: API.API_URL + "/Page/MyExamStat",
             data: { page: 1, rows: 10, sort: 'Id', order: 'desc', titleNav: '考试统计' }
         },
-        //我的收藏
+        // 我的收藏
         MyFavorite: {
             url: API.API_URL + "/Page/MyFavorite",
             data: { page: 1, rows: 10, sort: 'Id', order: 'desc', titleNav: '我的收藏' }
         },
-        //收藏
+        // 收藏
         FavoriteAdd: {
             url: API.API_URL + "/Page/FavoriteAdd",
             data: { mainId: '', type: '', title: '', remark: '' }
         },
-        //取消收藏
+        // 取消收藏
         FavoriteDelete: {
             url: API.API_URL + "/Page/FavoriteDelete",
             data: { id: '' }
         },
-        //学习计划
+        // 学习计划
         MyStudyPlan: {
             url: API.API_URL + "/Page/MyStudyPlan",
             data: { page: 1, rows: 10, sort: 'Id', order: 'desc', titleNav: '学习计划' }
         },
-        //获取笔记
+        // 获取笔记
         NoteAdd: {
             url: API.API_URL + "/Home/NoteAdd",
             data: { courseId: '' }
         },
-        //添加笔记
+        // 添加笔记
         AddNote: {
             url: API.API_URL + "/Page/AddNote",
             data: { Name: '', Content: '', CourseId: '' }
         },
-        //笔记列表
+        // 笔记列表
         CourseNoteList: {
             url: API.API_URL + "/Page/CourseNoteList",
             data: { CourseId: '' }
         },
-        //编辑笔记
+        // 编辑笔记
         NoteUpdate: {
             url: API.API_URL + "/Page/NoteUpdate",
             data: {}
         },
-        //删除笔记
+        // 删除笔记
         DelNote: {
             url: API.API_URL + "/Page/DelNote",
             data: { Id: '' }
         },
 
-        //添加计划
+        // 添加计划
         StudyPlanAdd: {
             url: API.API_URL + "/Home/StudyPlanAdd",
             data: { courseId: '' }
         },
-        //添加计划提交
+        // 添加计划提交
         AddStudyPlan: {
             url: API.API_URL + "/Page/StudyPlanAdd",
             data: { PlanFinishDate: '', RemindDate: '', RemindCycle: '', Remark: '', CourseId: '' }
         },
-        //查看计划
+        // 查看计划
         StudyPlanUpdate: {
             url: API.API_URL + "/Home/StudyPlanUpdate",
             data: { courseId: '' }
         },
-        //提交修改计划
+        // 提交修改计划
         EditStudyPlanUpdate: {
             url: API.API_URL + "/Page/StudyPlanUpdate",
             data: { PlanFinishDate: '', RemindDate: '', RemindCycle: '', Remark: '', CourseId: '', Id: '' }

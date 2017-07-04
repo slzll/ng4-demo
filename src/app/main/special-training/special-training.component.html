@@ -1,0 +1,84 @@
+<!--专题培训-->
+<div id="special-training" class="special-training container_24 mar_top_20">
+  <div class="com-header">
+  </div>
+  <div class="special-training-content">
+    <div class="left-info">
+      <div class="title"><span>&nbsp;</span>区、县（市）频道</div>
+      <div class="content">
+        <div class="tab-content">
+          <div class="tab-panel perlist" [hidden]="vm !== 1">
+            <a href=""><img title="南岗区" [ngClass]="" [src]="'assets/images/timg.jpg'" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+          </div>
+          <div class="tab-panel perlist" [hidden]="vm !== 2">
+            <a href=""><img title="道里区" [ngClass]="" [src]="'assets/images/timg.jpg'" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+          </div>
+          <div class="tab-panel perlist" [hidden]="vm !== 3">
+            <a href=""><img title="道外区" [ngClass]="" [src]="'assets/images/timg.jpg'" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+          </div>
+          <div class="tab-panel perlist" [hidden]="vm !== 4">
+            <a href=""><img title="香坊区" [ngClass]="" [src]="'assets/images/timg.jpg'" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+          </div>
+          <div class="tab-panel perlist" [hidden]="vm !== 5">
+            <a href=""><img title="松北区" [ngClass]="" [src]="'assets/images/timg.jpg'" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+          </div>
+          <div class="tab-panel perlist" [hidden]="vm !== 6">
+            <a href=""><img title="平房区" [ngClass]="" [src]="'assets/images/timg.jpg'" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+          </div>
+          <div class="tab-panel perlist" [hidden]="vm !== 7">
+            <a href=""><img title="呼兰区" [ngClass]="" [src]="'assets/images/timg.jpg'" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+          </div>
+          <div class="tab-panel perlist" [hidden]="vm !== 8">
+            <a href=""><img title="阿城区" [ngClass]="" [src]="'assets/images/timg.jpg'" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+          </div>
+          <div class="tab-panel perlist" [hidden]="vm !== 9">
+            <a href=""><img title="双城区" [ngClass]="" [src]="'assets/images/timg.jpg'" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+          </div>
+
+        </div>
+        <div class="right-nav">
+          <ul class="nav nav-tabs" ng-init="vm=1">
+            <li [ngClass]="{active: vm == 1}">
+              <span (click)="vm=1">南岗区</span>
+            </li>
+            <li [ngClass]="{active: vm == 2}">
+              <span (click)="vm=2">道里区</span>
+            </li>
+            <li [ngClass]="{active: vm == 3}">
+              <span (click)="vm=3">道外区</span>
+            </li>
+            <li [ngClass]="{active: vm == 4}">
+              <span (click)="vm=4">香坊区</span>
+            </li>
+            <li [ngClass]="{active: vm == 5}">
+              <span (click)="vm=5">松北区</span>
+            </li>
+            <li [ngClass]="{active: vm == 6}">
+              <span (click)="vm=6">平房区</span>
+            </li>
+            <li [ngClass]="{active: vm == 7}">
+              <span (click)="vm=7">呼兰区</span>
+            </li>
+            <li [ngClass]="{active: vm == 8}">
+              <span (click)="vm=8">阿城区</span>
+            </li>
+            <li [ngClass]="{active: vm == 9}">
+              <span (click)="vm=9">双城区</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="right-info">
+      <div class="title">
+        <div><span>&nbsp;</span>热点频道</div>
+        <p class="more"><a routerLink="specialTrainingCourse" target="_blank">更多</a></p>
+      </div>
+      <div class="content">
+        <ul *ngFor="let item of specialTraining">
+          <li title="{{item.Name}}"><span class="dian"></span><a [routerLink]="['articleDetail',{ID:item.Id}]" target="_blank">{{item.Name|timeLimit:'20'}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

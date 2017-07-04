@@ -1,0 +1,119 @@
+.tmNewsInformation .com-header{
+    margin:20px 0 15px 0;
+    height: 62px;
+    background:url("../../../assets/images/News.png") no-repeat center top;
+}
+.tmNewsInformation .left-info{
+    width: 56%;
+    float: left;
+}
+.tmNewsInformation .middle-info{
+    width: 2%;
+    float: left;
+    padding: 40px 0px;
+}
+.tmNewsInformation .left-info img{
+    width: 99%;
+    height: 350px !important;
+    margin: 20px 0 !important;
+    border: 1px solid #E20000;
+}
+.tmNewsInformation .right-info{
+    width: 42%;
+    float: left;
+    margin: 20px 0 0 0px;
+}
+.tmNewsInformation .right-info p.more{
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 30px;
+    line-height: 32px;
+    float: right;
+}
+.tmNewsInformation .right-info p.more a {
+    color: #CCCCCC;
+}
+.tmNewsInformation .right-info ul.nav-tabs{
+    display: inline-block;
+}
+.tmNewsInformation .right-info .nav-tabs li{
+    margin:0 0 10px 0;
+    line-height: 32px;
+    width: 110px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tmNewsInformation .right-info .nav-tabs li.active span{
+    display: block;
+    padding: 0 20px;
+    border-radius: 16px;
+    background: #d30a0a;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tmNewsInformation .right-info p.title{
+    font-size:24px;
+    font-family: "宋体", Serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 5px;
+    width:100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.tmNewsInformation .right-info .first-news p.content{
+    font-family: "宋体", Serif;
+    font-weight: 600;
+    font-size:18px;
+    text-indent: 2em;
+    line-height: 26px;
+    padding-left: 10px;
+}
+.tmNewsInformation .right-info .first-news p.content a{
+    font-family: "宋体", Serif;
+    font-weight: 600;
+    font-size:18px;
+    line-height: 26px;
+}
+.tmNewsInformation .dian{
+    background-color: #e20000;
+    text-align: center;
+    margin: 14px 10px;
+}
+.tmNewsInformation .right-info .news{
+    font-family: "宋体", Serif;
+    font-weight: 600;
+    line-height: 32px;
+}
+.tmNewsInformation .right-info .news .time{
+    display: inline-block;
+    float: right;
+}
+.tmNewsInformation .right-info .tab-content li{
+    line-height: 26px;
+    height: 26px;
+}
+.tmNewsInformation .right-info .tab-content ul li a{
+    display: inline-block;
+    max-width: 280px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 18px;
+}
+.tmNewsInformation .right-info .tab-content .new{
+    display: inline-block;
+    /*float: left;*/
+    width: 30px;
+    height: 13px;
+    background: url("../../../assets/images/New_1.png");
+    margin: 10px 2px;
+}

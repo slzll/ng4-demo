@@ -18,11 +18,11 @@
         "testTsconfig": "tsconfig.spec.json",
         "prefix": "app",
         "styles": [
+            "../node_modules/bootstrap/dist/css/bootstrap.min.css",
             "960_24_col.css",
             "main.css",
             "pageNation.css",
-            "drag.css",
-            "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+            "drag.css"
         ],
         "scripts": [
             "../node_modules/jquery/dist/jquery.min.js",

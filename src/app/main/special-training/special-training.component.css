@@ -1,0 +1,104 @@
+.special-training .com-header{
+    margin:20px 0 15px 0;
+    height: 66px;
+    background:url("../../../assets/images/SpecialTraining.png") no-repeat center top;
+}
+.special-training-content{
+    margin-top: 10px;
+}
+.special-training-content .left-info{
+    width: 49%;
+    height: 400px;
+    float: left;
+    border: 1px solid #ddd;
+    border-top:2px solid #e20000;
+}
+.special-training-content .right-info{
+    width: 49%;
+    float: left;
+    height: 400px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-top:2px solid #e20000;
+}
+.special-training-content .title{
+    font-size: 24px;
+    font-family: 黑体;
+    font-weight: 600;
+    padding: 15px 10px;
+}
+.special-training-content .title>div{
+    display: inline-block;
+}
+.special-training-content .title span{
+    display: inline-block;
+    float: left;
+    background: url("../../../assets/images/left.png") no-repeat center;
+}
+.special-training-content .content{
+    margin-top: 15px;
+}
+.special-training-content .left-info .content .tab-content{
+    float: left;
+    width: 80%;
+}
+.special-training-content .left-info .content .tab-content img{
+    width: 96%;
+    height: 300px;
+}
+.special-training-content .left-info .content .right-nav{
+    float: left;
+    width: 18%;
+}
+.special-training-content .left-info .content .right-nav li{
+    width: 80px;
+    margin: 2px 0;
+    text-align: center;
+    color: #ddd;
+    font-size: 16px;
+    font-family: "宋体", Serif;
+    /*font-weight: 600;*/
+    cursor: pointer;
+}
+.special-training-content .left-info .content .right-nav li.active{
+    width: 80px;
+    margin: 5px 0;
+    text-align: center;
+    color: #0a0a0a;
+}
+.special-training-content .right-info .content .dian{
+    background-color: #e20000;
+    text-align: center;
+    margin:0 10px 10px 10px;
+}
+.special-training-content .right-info .content{
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: "宋体", Serif;
+    font-weight: 600;
+}
+.special-training-content .right-info .content li{
+    height: 25px;
+    line-height: 25px;
+}
+.special-training-content .right-info .content li a{
+    display: inline-block;
+    width:396px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "宋体", Serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+.special-training-content .right-info p.more{
+    display: inline;
+    font-size: 14px;
+    margin-right: 30px;
+    line-height: 32px;
+    float: right;
+}
+.special-training-content .right-info p.more a{
+    color: #CCC;
+    font-weight: 500;
+}
