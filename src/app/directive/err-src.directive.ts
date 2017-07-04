@@ -20,7 +20,7 @@ export class ErrSrcDirective implements AfterViewInit {
   ngAfterViewInit() {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
-    console.log(this.el);
+    // console.log(this.el);
     if (this.el.nativeElement.src == 'undefined') {
       this.el.nativeElement.src = this.errSrc;
     }

@@ -19,10 +19,10 @@
         "prefix": "app",
         "styles": [
             "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-            "960_24_col.css",
-            "main.css",
-            "pageNation.css",
-            "drag.css"
+            "assets/css/960_24_col.css",
+            "assets/css/main.css",
+            "assets/css/pageNation.css",
+            "assets/css/drag.css"
         ],
         "scripts": [
             "../node_modules/jquery/dist/jquery.min.js",

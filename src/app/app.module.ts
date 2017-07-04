@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { CommonServiceService } from './services/common-service.service';
 
 import { AppComponent } from './app.component';
 import { NavBarsComponent } from './nav-bars/nav-bars.component';
@@ -23,6 +24,7 @@ import { DateFilterPipe } from './pipe/date-filter.pipe';
 import { SpecialTrainingComponent } from './main/special-training/special-training.component';
 import { TrainingProgramComponent } from './main/training-program/training-program.component';
 import { StatisticalRankingComponent } from './main/statistical-ranking/statistical-ranking.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { StatisticalRankingComponent } from './main/statistical-ranking/statisti
     DateFilterPipe,
     SpecialTrainingComponent,
     TrainingProgramComponent,
-    StatisticalRankingComponent
+    StatisticalRankingComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,7 @@ import { StatisticalRankingComponent } from './main/statistical-ranking/statisti
     JsonpModule,
     RouterModule.forRoot(appRoute)
   ],
-  providers: [],
+  providers: [CommonServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

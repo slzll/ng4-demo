@@ -312,12 +312,12 @@ h4 {
 .breadcrumb {
 }
 .datebg {
-  background: url("assets/images/datePicker.gif") no-repeat right;
+  background: url("../images/datePicker.gif") no-repeat right;
 }
 .breadcrumb .currentPosition{
   color: #000;
   padding-left: 25px;
-  background: url("assets/images/link.gif") 0 2px no-repeat;
+  background: url("../images/link.gif") 0 2px no-repeat;
 }
 .formCourse{
   margin-left: 40px;
@@ -365,7 +365,7 @@ h4.title-h4{
   height: 18px;
   margin-right: 14px;
   /*float: left;*/
-  background: url("assets/images/star_all.gif") 0 0 no-repeat;
+  background: url("../images/star_all.gif") 0 0 no-repeat;
 }
 /*
  *星级评论
@@ -382,17 +382,17 @@ h4.title-h4{
   width: 25px;
   line-height: 25px;
   height:25px;
-  background-image: url("assets/images/star_all_02.png");
+  background-image: url("../images/star_all_02.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .myStarHover.my-stars-items{
-  background-image: url("assets/images/star_all_04.png");
+  background-image: url("../images/star_all_04.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .myStarsSel.my-stars-items{
-  background-image: url("assets/images/star_all_04.png");
+  background-image: url("../images/star_all_04.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -565,5 +565,5 @@ h4.title-h4{
 
 
 .ajax-error{
-  background: url("assets/images/modulebaseload.gif") 50% 50% no-repeat;
+  background: url("../images/modulebaseload.gif") 50% 50% no-repeat;
 }

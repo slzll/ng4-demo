@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalConfig } from '../../global-config';
-import { Http, Response, URLSearchParams } from '@angular/http';
-import 'rxjs/Rx';
+import { CommonServiceService } from '../../services/common-service.service';
 import {ActivatedRoute, Route, Router} from "@angular/router";
 
 @Component({
@@ -24,21 +22,10 @@ export class NewsComponent implements OnInit {
   photoData: any;
   activePhotoData: object;
 
-  constructor(private http: Http, private router: Router, private route: ActivatedRoute) {
+  constructor(private service: CommonServiceService, private router: Router, private route: ActivatedRoute) {
     this.vmnews = 1;
   }
-  getData(urlSource: string, option: any): Promise<any> {
-    let params = new URLSearchParams();
-    const data = Object.assign(GlobalConfig.ALL_PORT[urlSource].data,
-        { page: 1, rows: 8, desc: 'desc', sort: 'Sort'}, option);
-    for (let i in data) {
-      params.set(i, data[i]);
-    }
-    return this.http.post(GlobalConfig.ALL_PORT[urlSource].url, params
-    ).toPromise().then(function (r) {
-      return r.json().Data;
-    });
-  }
+
   isNew(createDate: string): boolean {
     // 当前时间
     const date = Date.parse(new Date().toString());
@@ -53,22 +40,22 @@ export class NewsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getData('ArticleList', { CategoryId: 3}).then(res => {
+    this.service.getData('ArticleList', { CategoryId: 3, page: 1, rows: 8, desc: 'desc', sort: 'Sort'}).then(res => {
       this.newsTitle = res.CategoryName;
       this.newsData = res.ListData;
       this.activeNewsData = this.newsData.shift();
     });
-    this.getData('ArticleList', { CategoryId: 23}).then(res => {
+    this.service.getData('ArticleList', { CategoryId: 23, page: 1, rows: 8, desc: 'desc', sort: 'Sort'}).then(res => {
       this.policyTitle = res.CategoryName;
       this.policyData = res.ListData;
       this.activePolicyData = this.policyData.shift();
     });
-    this.getData('noticeAnnouncement', { CategoryId: 1}).then(res => {
+    this.service.getData('noticeAnnouncement', { CategoryId: 1, page: 1, rows: 8, desc: 'desc', sort: 'Sort'}).then(res => {
       this.noticeTitle = res.TitleNav;
       this.noticeData = res.ListData;
       this.activeNoticeData = this.noticeData.shift();
     });
-    this.getData('ArticleCarousel', {rows: 5, ids: 26, img: true}).then(res => {
+    this.service.getData('ArticleCarousel', {rows: 5, ids: 26, img: true, page: 1, desc: 'desc', sort: 'Sort'}).then(res => {
       this.path = res.Path;
       this.photoData = res.ListData;
       this.activePhotoData = this.photoData.shift();

@@ -1,0 +1,21 @@
+<!--@*bottom*@-->
+<div class="footer">
+  <div class="friendlyLink mar_top_20">
+    <select [(ngModel)]="linkNode" (ngModelChange)="linkChange($event)"  *ngFor="let friendlyLink of firenlyLinkData;index as $index">
+      <option value="" disabled>---{{(friendlyLink)?.Name}}---</option>
+      <option *ngFor="let item of (friendlyLink)?.Nodes" [ngValue]="item">{{(item)?.Name}}</option>
+    </select>
+  </div>
+  <div class="footerBg">
+    <div class="foot_con">
+      <div class="left" style="width: 15%;text-align: right">
+        <a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=2F675AEA846E7A8EE053012819AC82C2"><img src="//dcs.conac.cn/image/blue.png" alt=""></a>
+      </div>
+      <div class="left">
+        <p>主办：中共哈尔滨市委组织部 | 承办：哈尔滨广播电视大学</p>
+        <p>地址：<a target="_blank" href="http://map.baidu.com/?newmap=1&ie=utf-8&s=s%26wd%3D%E5%93%88%E5%B0%94%E6%BB%A8%E5%B8%82%E5%8D%97%E5%B2%97%E5%8C%BA%E4%B8%80%E6%9B%BC%E8%A1%97259%E5%8F%B7">哈尔滨市南岗区一曼街259号</a> | 电话：<a href="tel:0451-536560">0451-536560</a> | 电子邮箱：<a href="mailto:hrbgbzx@163.com">hrbgbzx@163.com</a></p>
+        <p>版权：<a target="_blank" href="http://www.miibeian.gov.cn/">哈尔滨干部在线学习中心 | 黑ICP备09000474号</a></p>
+      </div>
+    </div>
+  </div>
+</div>

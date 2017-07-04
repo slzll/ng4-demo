@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Http, Response } from '@angular/http';
-import 'rxjs/Rx';
-
-import { GlobalConfig } from '../global-config';
+import { CommonServiceService } from '../services/common-service.service';
 
 @Component({
   selector: 'app-nav-bars',
@@ -18,14 +14,10 @@ export class NavBarsComponent implements OnInit {
       UserVisitCount: 0
     }
   };
-  constructor(private http: Http) { }
-
-  getData(): Promise<any> {
-    return this.http.get(GlobalConfig.ALL_PORT.LeftRealTimeData.url).toPromise().then(r => r.json().Data);
-  }
+  constructor(private service: CommonServiceService) { }
 
   ngOnInit() {
-    this.getData().then(res => {
+    this.service.getData('LeftRealTimeData').then(res => {
       this.realTimeData = res;
       console.log(this.realTimeData);
     });
