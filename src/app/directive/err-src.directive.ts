@@ -16,20 +16,20 @@ import { Directive, ElementRef, HostListener, Input, Renderer, AfterViewInit } f
   selector: '[ErrSrc]'
 })
 export class ErrSrcDirective implements AfterViewInit {
+  @Input() errSrc: String;
 
   ngAfterViewInit() {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
+    // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    // Add 'implements AfterViewInit' to the class.
     // console.log(this.el);
-    if (this.el.nativeElement.src == 'undefined') {
+    if (this.el.nativeElement.src === 'undefined') {
       this.el.nativeElement.src = this.errSrc;
     }
   }
-  @Input("ErrSrc") errSrc: String;
 
   constructor(private el: ElementRef, private renderer: Renderer) {
   }
-    @HostListener('error', ['$event']) onchange(){
+    @HostListener('error', ['$event']) onchange() {
       this.el.nativeElement.src = this.errSrc;
     }
 }

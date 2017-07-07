@@ -9,8 +9,7 @@ export class DateFilterPipe implements PipeTransform {
     if (!value) {
       return "";
     }
-    const date = value.replace(/[^0-9-]/ig, "");
-    return date;
+    return value.replace(/[^0-9-]/ig, "");
   }
 
 }

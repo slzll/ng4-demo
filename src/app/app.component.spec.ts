@@ -9,7 +9,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-      imports:[RouterModule.forRoot([])]
+      imports: [RouterModule.forRoot([])]
     }).compileComponents();
   }));
 

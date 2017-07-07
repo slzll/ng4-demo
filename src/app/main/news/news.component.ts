@@ -31,7 +31,7 @@ export class NewsComponent implements OnInit {
     const date = Date.parse(new Date().toString());
     // 正则
     const reg = /^.+?\((.+?)\).*$/;
-    const flag = Math.round((date - parseInt(reg.exec(createDate)[1])) / (1000 * 60 * 60 * 24)) < 31;
+    const flag = Math.round((date - parseInt(reg.exec(createDate)[1], 10)) / (1000 * 60 * 60 * 24)) < 31;
     // console.log(flag);
     return flag;
   };
