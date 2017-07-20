@@ -9,13 +9,13 @@
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#carousel-special-training" data-slide-to="0" class="active"></li>
-          <li *ngFor="let photoData of photoData; index as $index" data-target="#carousel-special-training" data-slide-to="2"></li>
+          <li *ngFor="let photoData of photoData; index as $index" data-target="#carousel-special-training" dataSlideTo [index]="$index"></li>
         </ol>
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item clearfix active">
             <a target="_blank" (click)="newsDetail('/articleDetail',activePhotoData.Id)" ref="">
-              <img class="item clearfix" [src]="path+'/'+(activePhotoData)?.Img" [ErrSrc]="'assets/images/notFound.jpeg'">
+              <img class="item clearfix" [src]="path+'/'+(activePhotoData)?.Img" errSrc="assets/images/notFound.jpeg">
               <div class="carousel-caption">
                 {{(activePhotoData)?.Name}}
               </div>
@@ -23,7 +23,7 @@
           </div>
           <div class="item clearfix" *ngFor="let item of photoData">
             <a target="_blank" (click)="newsDetail('/articleDetail',activePhotoData.Id)">
-              <img  [src]="path+'/'+(item)?.Img" [ErrSrc]="'assets/images/notFound.jpeg'">
+              <img  [src]="path+'/'+(item)?.Img" errSrc="assets/images/notFound.jpeg">
               <div class="carousel-caption">
                 {{(item)?.Name}}
               </div>
@@ -76,7 +76,7 @@
             <p class="content">{{(activeNoticeData)?.Name|timeLimit:'55'}}<a target="_blank" (click)="newsDetail('noticeDetail',activeNoticeData.Id)" [hidden]="!(activeNoticeData)?.Name">[显示全文]</a> </p>
           </div>
           <ul class="news" *ngFor="let item of noticeData">
-            <li title="{{(item)?.Name}}"><span class="dian"></span><a target="_blank"  (click)="newsDetail('articleDetail',item.Id)">{{item.Name}}</a><span class="new"  [hidden]="isNew((item)?.CreateDate)"></span><span class="time">{{item.CreateDate | dateFilter | date:'yyyy-MM-dd'}}</span></li>
+            <li title="{{(item)?.Name}}"><span class="dian"></span><a target="_blank"  (click)="newsDetail('articleDetail',item.Id)">{{item.Name}}</a><span class="new"  [hidden]="!isNew((item)?.CreateDate)"></span><span class="time">{{item.CreateDate | dateFilter | date:'yyyy-MM-dd'}}</span></li>
           </ul>
         </div>
         <div  class="tab-panel perlist" [hidden]="vmnews !== 3">
@@ -85,7 +85,7 @@
             <p class="content">{{(activePolicyData)?.Description|timeLimit:'55'}}<a target="_blank" (click)="newsDetail('articleDetail',activePolicyData.Id)" [hidden]="!(activePolicyData)?.Name">[显示全文]</a></p>
           </div>
           <ul class="news" *ngFor="let item of policyData">
-            <li title="{{(item)?.Name}}"><span class="dian"></span><a target="_blank" (click)="newsDetail('articleDetail',item.Id)">{{item.Name}}</a><span class="new" [hidden]="isNew((item)?.CreateDate)"></span><span class="time">{{item.CreateDate | dateFilter | date:'yyyy-MM-dd'}}</span></li>
+            <li title="{{(item)?.Name}}"><span class="dian"></span><a target="_blank" (click)="newsDetail('articleDetail',item.Id)">{{item.Name}}</a><span class="new" [hidden]="!isNew((item)?.CreateDate)"></span><span class="time">{{item.CreateDate | dateFilter | date:'yyyy-MM-dd'}}</span></li>
           </ul>
         </div>
       </div>

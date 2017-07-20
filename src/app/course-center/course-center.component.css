@@ -1,0 +1,128 @@
+.wid_750{width:750px;}
+.tmCourseSupermarket{
+  margin:0 auto;
+}
+.course_resource{
+  height:245px;
+}
+.tmCourseSupermarket .course_title{
+  height:40px;
+  background:url("../../assets/images/course_titlebg.png") repeat-x;
+}
+.tmCourseSupermarket .course_title .p_title{
+  width:127px;
+  height: 36px;
+  background: #e4242d;
+  text-align: center;
+  line-height: 36px;
+  color:#fff;
+  font-size: 24px;
+}
+.course_list ul li{
+  float: left;
+  width:46px;
+  height:200px;
+  line-height: 260px;
+  background: url("../../assets/images/course_listbg.png") no-repeat left top;
+  text-align: center;
+  vertical-align: middle;
+}
+.course_list ul li a{
+  display: inline-block;
+  width: 22px;
+  font-size: 20px;
+  line-height: 22px;
+  color:#fff;
+}
+.course_list ul .first_red{
+  width:56px;
+  background: url("../../assets/images/course_listred.png") repeat-y;
+}
+.course_list ul li.red_list:hover{
+  background: url("../../assets/images/course_listred.png") repeat-y;
+}
+.course_filtrate{
+  float: left;
+  width:416px;
+  height:199px;
+  background: url("../../assets/images/filter_bg.png") no-repeat left top;
+}
+.course_filtrate .key_word{
+  width:220px;
+  height:20px;
+  margin:45px 0 0 23px;
+}
+.search_course{
+  width:160px;
+  height:20px;
+  margin:13px 0 0 86px;
+  line-height: 20px;
+}
+.srarch_year{
+  width:277px;
+  height:85px;
+  margin-left:23px;
+  margin-top:10px;
+}
+.btn{
+  margin-left:38px;
+}
+.btn input{
+  width:47px;
+  height:24px;
+  margin-left:28px;
+}
+.expand_resource .expand_list ul li{
+  width:240px;
+  height:275px;
+  margin:3px 0 0 9px;
+  float: left;
+}
+.expand_resource .expand_list ul li .list_img{
+  width:240px;
+  height:135px;
+}
+.expand_resource .expand_list ul li .list_img img{
+  width:240px;
+  height:135px;
+}
+.expand_resource .expand_list ul li .video{
+  width:240px;
+  height:32px;
+  line-height: 32px;
+}
+.video p{
+  font-size: 18px;
+  width:130px;
+  height:32px;
+  color:#fff;
+  text-align: center;
+  background:url("../../assets/images/expand_bgred.png") no-repeat left 2px;
+  float:left;
+
+}
+.video .more{
+  float: right;
+  font-style: 12px;
+  color: #afafaf;
+  margin-top:10px;
+}
+.expand_list .list p{
+  width:240px;
+  height:24px;
+  color:#5f5f5f;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.expand_list .list p:hover{
+  color:#337ab7;
+}
+.sure{
+  float: left;
+  width:47px;
+  height:24px;
+  border:1px solid #c3c1be;
+  background: #fff;
+}

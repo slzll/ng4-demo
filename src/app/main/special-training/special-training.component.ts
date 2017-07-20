@@ -18,7 +18,7 @@ export class SpecialTrainingComponent implements OnInit {
     this.service.getData('ArticleList',
         {page: 1, rows: 12, CategoryId: 27, desc: 'desc', sort: 'Sort', wordLimt: 20}).then(res => {
 
-      this.specialTraining = res.ListData;
+      this.specialTraining = res.Data.ListData;
       // console.log(this.requiredCourseData);
     });
   }

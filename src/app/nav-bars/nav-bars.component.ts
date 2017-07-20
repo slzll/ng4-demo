@@ -18,7 +18,7 @@ export class NavBarsComponent implements OnInit {
 
   ngOnInit() {
     this.service.getData('LeftRealTimeData').then(res => {
-      this.realTimeData = res;
+      this.realTimeData = res.Data;
       console.log(this.realTimeData);
     });
   }

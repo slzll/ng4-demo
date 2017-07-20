@@ -10,13 +10,14 @@ export class FooterComponent implements OnInit {
   firenlyLinkData: any;
   linkNode: any;
 
-  constructor(private service: CommonServiceService) { }
+  constructor(private service: CommonServiceService) {
+  }
 
   ngOnInit() {
     // 友情链接
     this.service.getData('Blogroll')
         .then(response => {
-          this.firenlyLinkData = response.ListData;
+          this.firenlyLinkData = response.Data.ListData;
           // console.log(this.firenlyLinkData);
         });
   }

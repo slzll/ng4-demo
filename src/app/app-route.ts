@@ -54,6 +54,10 @@ export const appRoute = [
         component: CommonProblemComponent
     },
     {
+        path: 'courseSupermarket/?:channelId',
+        component: CommonProblemComponent
+    },
+    {
         path: '',
         redirectTo: '/main',
         pathMatch: 'full'

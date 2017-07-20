@@ -1,10 +1,13 @@
 <!--@*bottom*@-->
 <div class="footer">
   <div class="friendlyLink mar_top_20">
-    <select [(ngModel)]="linkNode" (ngModelChange)="linkChange($event)"  *ngFor="let friendlyLink of firenlyLinkData;index as $index">
-      <option value="" disabled>---{{(friendlyLink)?.Name}}---</option>
-      <option *ngFor="let item of (friendlyLink)?.Nodes" [ngValue]="item">{{(item)?.Name}}</option>
-    </select>
+    <form>
+      <select [(ngModel)]="linkNode" (ngModelChange)="linkChange($event)"
+              *ngFor="let friendlyLink of firenlyLinkData;index as $index" [ngModelOptions]="{standalone:true}">
+        <option value="" disabled defaultShow>---{{(friendlyLink)?.Name}}---</option>
+        <option *ngFor="let item of (friendlyLink)?.Nodes" [ngValue]="item">{{(item)?.Name}}</option>
+      </select>
+    </form>
   </div>
   <div class="footerBg">
     <div class="foot_con">

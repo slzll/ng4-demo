@@ -31,7 +31,7 @@ export class NewsComponent implements OnInit {
     const date = Date.parse(new Date().toString());
     // 正则
     const reg = /^.+?\((.+?)\).*$/;
-    const flag = Math.round((date - parseInt(reg.exec(createDate)[1], 10)) / (1000 * 60 * 60 * 24)) < 31;
+    let flag = Math.round((date - parseInt(reg.exec(createDate)[1], 10)) / (1000 * 60 * 60 * 24)) < 31;
     // console.log(flag);
     return flag;
   };
@@ -41,23 +41,23 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
     this.service.getData('ArticleList', { CategoryId: 3, page: 1, rows: 8, desc: 'desc', sort: 'Sort'}).then(res => {
-      this.newsTitle = res.CategoryName;
-      this.newsData = res.ListData;
+      this.newsTitle = res.Data.CategoryName;
+      this.newsData = res.Data.ListData;
       this.activeNewsData = this.newsData.shift();
     });
     this.service.getData('ArticleList', { CategoryId: 23, page: 1, rows: 8, desc: 'desc', sort: 'Sort'}).then(res => {
-      this.policyTitle = res.CategoryName;
-      this.policyData = res.ListData;
+      this.policyTitle = res.Data.CategoryName;
+      this.policyData = res.Data.ListData;
       this.activePolicyData = this.policyData.shift();
     });
     this.service.getData('noticeAnnouncement', { CategoryId: 1, page: 1, rows: 8, desc: 'desc', sort: 'Sort'}).then(res => {
-      this.noticeTitle = res.TitleNav;
-      this.noticeData = res.ListData;
+      this.noticeTitle = res.Data.TitleNav;
+      this.noticeData = res.Data.ListData;
       this.activeNoticeData = this.noticeData.shift();
     });
     this.service.getData('ArticleCarousel', {rows: 5, ids: 26, img: true, page: 1, desc: 'desc', sort: 'Sort'}).then(res => {
-      this.path = res.Path;
-      this.photoData = res.ListData;
+      this.path = res.Data.Path;
+      this.photoData = res.Data.ListData;
       this.activePhotoData = this.photoData.shift();
     });
 

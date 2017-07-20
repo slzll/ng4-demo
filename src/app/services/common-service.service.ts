@@ -7,7 +7,7 @@ import 'rxjs/Rx';
 export class CommonServiceService {
 
   constructor(private http: Http) { }
-  getData(url, option?): Promise<any> {
+  getData(url, option?) {
     const params = new URLSearchParams();
     const data = Object.assign(GlobalConfig.ALL_PORT[url].data, option);
     for (const i in data) {
@@ -16,9 +16,7 @@ export class CommonServiceService {
       }
     }
     return this.http.post(GlobalConfig.ALL_PORT[url].url, params
-    ).toPromise().then(function (r) {
-      return r.json().Data;
-    });
+    ).map(res => res.json()).toPromise();
   }
 
 }

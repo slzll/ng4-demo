@@ -567,3 +567,12 @@ h4.title-h4{
 .ajax-error{
   background: url("../images/modulebaseload.gif") 50% 50% no-repeat;
 }
+
+
+.nav-tabs{
+  border-bottom: none;
+}
+
+.new[hidden]{
+  display: none !important;
+}

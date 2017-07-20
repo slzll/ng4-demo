@@ -11,10 +11,18 @@
     </div>
     <div class="course_con tab-content">
         <div class="tab-panel perlist" [hidden]="vmcourse !== 1">
-            <a *ngFor="let item of requiredCourseData" [routerLink]="['courseDetails',{Id:item.Id}]" target="_blank"><img title="{{item.Name}}" [src]="imgSource+'/'+item.Img" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+            <a *ngFor="let item of requiredCourseData"
+               [routerLink]="['courseDetails',{Id:item.Id}]"
+               target="_blank">
+              <img title="{{item.Name}}" [src]="imgSource+'/'+item.Img" errSrc="assets/images/notFound.jpeg">
+            </a>
         </div>
         <div class="tab-panel perlist" [hidden]="vmcourse !== 2">
-            <a *ngFor="let item of electivesCourseData" [routerLink]="['courseDetails',{Id:item.Id}]" target="_blank"><img title="{{item.Name}}" [src]="imgSource+'/'+item.Img" [ErrSrc]="'assets/images/notFound.jpeg'"></a>
+            <a *ngFor="let item of electivesCourseData"
+               [routerLink]="['courseDetails',{Id:item.Id}]"
+               target="_blank">
+              <img title="{{item.Name}}" [src]="imgSource+'/'+item.Img" errSrc="assets/images/notFound.jpeg">
+            </a>
         </div>
     </div>
     <div class="more clearfix">

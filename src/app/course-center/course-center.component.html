@@ -1,3 +1,102 @@
-<p>
-  course-center works!
-</p>
+<div class="container_24">
+  <div class="tmCourseSupermarket wid_750">
+    <div class="course_resource wid_750">
+      <div class="course_title wid_750">
+        <p class="p_title">
+          课程资源
+        </p>
+      </div>
+      <div class="course_list">
+        <ul>
+          <li class="first_red">
+            <a href="">课程体系</a>
+          </li>
+          <li class="red_list">
+            <a href="">政治理论</a>
+          </li>
+          <li class="red_list">
+            <a href="">政策法规</a>
+          </li>
+          <li class="red_list">
+            <a href="">业务技能</a>
+          </li>
+          <li class="red_list">
+            <a href="">人文素养</a>
+          </li>
+          <li class="red_list">
+            <a href="">本地课程</a>
+          </li>
+          <li class="red_list">
+            <a href="">微 课 程</a>
+          </li>
+        </ul>
+        <div class="course_filtrate">
+          <div class="key_word">
+            关 键 字 : <input type="text" [(ngModel)]='search.title'/>
+          </div>
+          <div class="search_course">
+            <input class="input1"  type="radio" name="radiobutton" value="true"  [(ngModel)]="search.flag"> 必修课
+            <input class="input1" type="radio" name="radiobutton" value="false" [(ngModel)]="search.flag" > 选修课
+            <!--   {{search}} -->
+          </div>
+          <div class="srarch_year">
+            <span>课程年份:</span>
+            <span style="float: right">
+                     <span><input type="radio" class="input1" name="radiobutton1" value="2017" [(ngModel)]="search.onlineTime" > <span>2017</span></span>
+                     <span><input type="radio" name="radiobutton1" value="2016" [(ngModel)]="search.onlineTime"> <span>2016</span></span>
+                     <span><input type="radio" name="radiobutton1" value="2015" [(ngModel)]="search.onlineTime"> <span>2015</span></span>
+                     <span><input type="radio" name="radiobutton1" value="2014" [(ngModel)]="search.onlineTime"> <span>2014</span></span><br/>
+                         <span ><input type="radio" name="radiobutton1" value="2013" [(ngModel)]="search.onlineTime"> <span>2013</span></span>
+                         <span><input type="radio" name="radiobutton1" value="2012" [(ngModel)]="search.onlineTime"> <span>2012</span></span>
+                         <span><input type="radio" name="radiobutton1" value="2011" [(ngModel)]="search.onlineTime"> <span>2011</span></span>
+                         <span><input type="radio" name="radiobutton1" value="2010" [(ngModel)]="search.onlineTime"> <span>2010</span></span>
+                    </span>
+            <span  class="btn" style="clear:both">
+                         <!--  <input type="button" value="确定"   ng-click="judgement(selectedName.id)" name="">  -->
+                         <a class="sure" [routerLink]="['courseSupermarket']">确定</a>
+
+                          <input style="background: #fff;border:1px solid #c3c1be;" type="button" value="重置"  name="" ng-click="resetRadio()">
+
+                    </span>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="expand_resource wid_750">
+      <div class="course_title wid_750">
+        <p class="p_title">
+          拓展资源
+        </p>
+      </div>
+      <div class="expand_list">
+        <ul>
+          <li *ngFor="let list of courseClassify; index as $index">
+            <div class="list_img">
+              <a [routerLink]="['courseSupermarket',list.Id]">
+                <img [src]="imgSrc+'/'+list.Img" errSrc="../../assets/images/notFound.jpeg" />
+              </a>
+            </div>
+            <div class="video">
+              <p>{{list.Name}}</p>
+              <a class="more" [routerLink]="['courseSupermarket',list.Id]">more>></a>
+            </div>
+            <ng-container *ngFor="let courseData of courseSupermarketData">
+              <ng-template ngIf [ngIf]="courseData.ChannelName==list.Name">
+                <div class="list" *ngFor="let course of courseData.ListData">
+                  <a [routerLink]="['courseDetails',course.Id]">
+                    <p title="{{course.Name}}">
+                      {{course.Name}}
+                    </p>
+                  </a>
+                </div>
+              </ng-template>
+            </ng-container>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
