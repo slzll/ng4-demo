@@ -1,0 +1,39 @@
+.cur_detail .jindu {
+  width: 100px;
+  border: 1px solid #7abc1d;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+}
+.cur_detail .jindubg {
+  float: left;
+  background: #7abc1d;
+  height: 15px;
+}
+.listtb3 a{
+  color: #3490f8;
+  text-decoration: underline;
+}
+.listtb1 {
+  width: 15%;
+  text-align: right;
+}
+tbody > tr > td.listtb1,tbody > tr > td.listtb3{
+  padding-right: 25px;
+}
+.listtb2 {
+  width: 50%;
+}
+.listtb3 {
+  width: 15%;
+  text-align: right;
+}
+.listtb4 {
+  width: 20%;
+}
+.listtb5 .jiedian {
+
+}
+.listtb5 .bar {
+  font-size: 15px;
+}

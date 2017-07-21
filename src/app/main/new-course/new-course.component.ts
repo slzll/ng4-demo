@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonServiceService } from '../../services/common-service.service';
+import { CommonService } from '../../services/common-service.service';
 import "../../directive/err-src.directive"
 
 @Component({
@@ -12,7 +12,7 @@ export class NewCourseComponent implements OnInit {
   electivesCourseData: Array<any>;
   vmcourse: number;
   imgSource: String;
-  constructor(private service: CommonServiceService) {
+  constructor(private service: CommonService) {
     this.vmcourse = 1;
   }
 

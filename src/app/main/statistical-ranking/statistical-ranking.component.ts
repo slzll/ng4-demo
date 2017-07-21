@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonServiceService } from '../../services/common-service.service';
+import { CommonService } from '../../services/common-service.service';
 
 @Component({
   selector: 'app-statistical-ranking',
@@ -11,7 +11,7 @@ export class StatisticalRankingComponent implements OnInit {
   unitRankData: any;
   userRankData: any;
 
-  constructor(private service: CommonServiceService) { }
+  constructor(private service: CommonService) { }
 
 
   ngOnInit() {

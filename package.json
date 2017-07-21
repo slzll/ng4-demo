@@ -21,9 +21,11 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.27",
+    "@types/bootstrap": "^3.3.35",
     "core-js": "^2.4.1",
     "fundebug-javascript": "^0.1.0",
     "ngx-bootstrap": "^1.7.1",
+    "ngx-cookie": "^1.0.0",
     "resolve-url-loader": "^2.1.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
@@ -32,10 +34,12 @@
     "@angular/cli": "1.0.3",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
+    "@types/jquery": "^2.0.42",
     "@types/node": "~6.0.60",
     "bootstrap": "^3.2.0",
     "bootstrap-loader": "^2.1.0",
     "codelyzer": "~2.0.0",
+    "eonasdan-bootstrap-datetimepicker": "*",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "jquery": "^1.9.0",
@@ -45,12 +49,11 @@
     "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "moment": "*",
     "protractor": "~5.1.0",
     "tether": "^1.4.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.2.0",
-    "moment": "*",
-    "eonasdan-bootstrap-datetimepicker": "*"
+    "typescript": "~2.2.0"
   }
 }

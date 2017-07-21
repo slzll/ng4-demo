@@ -15,7 +15,10 @@ export const appRoute = [
     },
     {
         path: 'personalCenter',
-        component: PersonalCenterComponent
+        component: PersonalCenterComponent,
+        children:[
+          {path: 'unReadNotice',component:PersonalCenterComponent}
+          ]
     },
     {
         path: 'commonProblem',
@@ -26,11 +29,11 @@ export const appRoute = [
         component: CommonProblemComponent
     },
     {
-        path: 'articleDetail/:ID',
+        path: 'articleDetail/:Id',
         component: CommonProblemComponent
     },
     {
-        path: 'noticeDetail/:ID',
+        path: 'noticeDetail/:Id',
         component: CommonProblemComponent
     },
     {
@@ -54,7 +57,11 @@ export const appRoute = [
         component: CommonProblemComponent
     },
     {
-        path: 'courseSupermarket/?:channelId',
+        path: 'courseSupermarket/:channelId',
+        component: CommonProblemComponent
+    },
+    {
+        path: 'personaLearningArchives',
         component: CommonProblemComponent
     },
     {

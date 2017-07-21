@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonServiceService } from '../../services/common-service.service';
+import { CommonService } from '../../services/common-service.service';
 import {ActivatedRoute, Route, Router} from "@angular/router";
 
 @Component({
@@ -22,7 +22,7 @@ export class NewsComponent implements OnInit {
   photoData: any;
   activePhotoData: object;
 
-  constructor(private service: CommonServiceService, private router: Router, private route: ActivatedRoute) {
+  constructor(private service: CommonService, private router: Router, private route: ActivatedRoute) {
     this.vmnews = 1;
   }
 
@@ -36,7 +36,7 @@ export class NewsComponent implements OnInit {
     return flag;
   };
   newsDetail(path, Id): void {
-    this.router.navigate([path, {ID: Id }]);
+    this.router.navigate([path, Id]);
   }
 
   ngOnInit() {

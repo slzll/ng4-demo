@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonServiceService } from '../../services/common-service.service';
+import { CommonService } from '../../services/common-service.service';
 
 @Component({
   selector: 'app-special-training',
@@ -10,7 +10,7 @@ export class SpecialTrainingComponent implements OnInit {
   specialTraining: Array<Object>;
   vm: number;
 
-  constructor(private service: CommonServiceService) {
+  constructor(private service: CommonService) {
     this.vm = 1;
   }
 

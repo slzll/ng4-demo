@@ -1,21 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import {CommonServiceService} from "../services/common-service.service";
-import {reduce} from "rxjs/operator/reduce";
-
+import {CommonService} from "../services/common-service.service";
+import {Search} from "../Interface/search";
 @Component({
   selector: 'app-course-center',
   templateUrl: './course-center.component.html',
   styleUrls: ['./course-center.component.css']
 })
-export class CourseCenterComponent implements OnInit {
+
+export class CourseCenterComponent implements OnInit{
+
   courseClassify:any;
   courseSupermarketData:Array<any>;
   imgSrc:any;
-  search:Object = {
-    title:String
-  }
+  search:Search= {
+    title:'',
+    flag:'',
+    onlineTime:''
+  };
 
-  constructor(private service:CommonServiceService) { }
+  constructor(private service:CommonService) { }
   searchCourse(index,item){
     let courseListParams={
       page:1,

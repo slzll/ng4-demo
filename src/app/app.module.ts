@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { CommonServiceService } from './services/common-service.service';
+import { CommonService } from './services/common-service.service';
 import { ErrSrcDirective } from './directive/err-src.directive';
 import { appRoute } from './app-route';
 
@@ -27,6 +27,12 @@ import { StatisticalRankingComponent } from './main/statistical-ranking/statisti
 import { FooterComponent } from './footer/footer.component';
 import { DataSlideToDirective } from './directive/data-slide-to.directive';
 import { DefaultShowDirective } from './directive/default-show.directive';
+import { CourseDetailsComponent } from './course-center/course-details/course-details.component';
+import {CookieModule} from "ngx-cookie";
+import {AntityForgeryService} from "./services/antity-forgery.service";
+import { UserInfoComponent } from './personal-center/user-info/user-info.component';
+import { PersonalCenterNavComponent } from './personal-center/personal-center-nav/personal-center-nav.component';
+import { MyCenterComponent } from './personal-center/my-center/my-center.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +53,11 @@ import { DefaultShowDirective } from './directive/default-show.directive';
     StatisticalRankingComponent,
     FooterComponent,
     DataSlideToDirective,
-    DefaultShowDirective
+    DefaultShowDirective,
+    CourseDetailsComponent,
+    UserInfoComponent,
+    PersonalCenterNavComponent,
+    MyCenterComponent
   ],
   imports: [
     CommonModule,
@@ -56,9 +66,10 @@ import { DefaultShowDirective } from './directive/default-show.directive';
     ReactiveFormsModule,
     HttpModule,
     JsonpModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute),
+    CookieModule.forRoot()
   ],
-  providers: [CommonServiceService],
+  providers: [CommonService,AntityForgeryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

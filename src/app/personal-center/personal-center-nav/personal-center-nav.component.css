@@ -1,0 +1,9 @@
+.personalCenterNav .content a.btn {
+  width: 90px;
+  background: rgb(221,221,221);
+  margin:15px 0 10px 40px;
+  border:none;
+}
+.personalCenterNav .content a.per_cen_nav{
+  color:#333;
+}

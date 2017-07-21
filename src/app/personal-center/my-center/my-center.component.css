@@ -1,0 +1,70 @@
+.myTab .perlist .list1 {
+  width: 200px;
+  height: 37px;
+}
+.myTab .perlist .list .list1 {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.myTab .perlist .list2 {
+  width: 100px;
+}
+.myTab .perlist .list .list2 {
+  position: relative;
+  top: 10px;
+}
+.myTab .perlist .list3 {
+  width: 50px;
+}
+.myTab .perlist .list4 {
+  width: 42px;
+}
+.myTab .perlist .list5 {
+  width: 70px;
+}
+.myTab .perlist .list6 {
+  width: 55px;
+}
+.myTab .perlist .list2 .jd_box {
+  border: 1px solid #7abc1d;
+  width: 99.5%;
+  height: 15px;
+  display: inline-block;
+  overflow: hidden;
+  text-align: left;
+  vertical-align: middle;
+}
+.myTab .perlist .list2 .jd_box .jd_bg {
+  display: inline-block;
+  background: #7abc1d;
+  height: 15px;
+}
+
+.myTab .modal-footer {
+  text-align: center;
+}
+.myTab .table input {
+  width: 320px;
+  text-align: left;
+  height: 26px;
+  line-height: 26px;
+}
+.myTab .table td {
+  text-align: left;
+}
+.myTab .seaNote a{
+  padding: 0 15px;
+}
+.myTab .newnote{
+  padding: 2px 12px;
+}
+.myTab .content_page{
+  line-height: 26px;
+}
+.myCenter .myTab ul.nav-tabs>li.active a{
+  border: 2px solid #e20000;
+}

@@ -46,14 +46,14 @@
                      <span><input type="radio" name="radiobutton1" value="2016" [(ngModel)]="search.onlineTime"> <span>2016</span></span>
                      <span><input type="radio" name="radiobutton1" value="2015" [(ngModel)]="search.onlineTime"> <span>2015</span></span>
                      <span><input type="radio" name="radiobutton1" value="2014" [(ngModel)]="search.onlineTime"> <span>2014</span></span><br/>
-                         <span ><input type="radio" name="radiobutton1" value="2013" [(ngModel)]="search.onlineTime"> <span>2013</span></span>
-                         <span><input type="radio" name="radiobutton1" value="2012" [(ngModel)]="search.onlineTime"> <span>2012</span></span>
-                         <span><input type="radio" name="radiobutton1" value="2011" [(ngModel)]="search.onlineTime"> <span>2011</span></span>
-                         <span><input type="radio" name="radiobutton1" value="2010" [(ngModel)]="search.onlineTime"> <span>2010</span></span>
+                     <span><input type="radio" name="radiobutton1" value="2013" [(ngModel)]="search.onlineTime"> <span>2013</span></span>
+                     <span><input type="radio" name="radiobutton1" value="2012" [(ngModel)]="search.onlineTime"> <span>2012</span></span>
+                     <span><input type="radio" name="radiobutton1" value="2011" [(ngModel)]="search.onlineTime"> <span>2011</span></span>
+                     <span><input type="radio" name="radiobutton1" value="2010" [(ngModel)]="search.onlineTime"> <span>2010</span></span>
                     </span>
             <span  class="btn" style="clear:both">
                          <!--  <input type="button" value="确定"   ng-click="judgement(selectedName.id)" name="">  -->
-                         <a class="sure" [routerLink]="['courseSupermarket']">确定</a>
+                         <a class="sure" [routerLink]="['courseSupermarket']" [queryParams]="search">确定</a>
 
                           <input style="background: #fff;border:1px solid #c3c1be;" type="button" value="重置"  name="" ng-click="resetRadio()">
 

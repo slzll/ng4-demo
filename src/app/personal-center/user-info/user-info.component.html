@@ -1,0 +1,38 @@
+<div class="UserInformation tmBorder-blue">
+  <div class="titlebg2">
+    <div class="txt">个人信息</div>
+  </div>
+  <div class="content login_info">
+    <ul class="loginAfter_ul">
+      <li class="welcom">欢迎您:<b class="blue">{{info?.Model.Name}}</b>({{info?.Model.Account}})</li>
+      <li>
+        <span  class="hours">课程学时：<span class="blue">{{info?.Model.PcCredit+info?.Model.MobileCredit}}</span></span>
+        <span>考试学时：<span class="blue">{{info?.Model.ExamCredit}}</span></span>
+      </li>
+      <li>
+        <span  class="hours">当前学时：<span class="blue">{{info?.Model.SumCredit}}</span></span>
+        <span  class="hours">规定学时：<span class="blue">{{info?.Model.BatchTotalCredit}}</span></span>
+      </li>
+      <li>
+        <span>考核状态：<span class="blue">{{info?.Model.PassStatus?"通过":"未通过"}}</span></span>
+      </li>
+      <li>
+        <span>个人学习档案</span>
+        <span class="list2 grey"><a [routerLink]="['/personaLearningArchives']" target="_blank">详细&gt;&gt;</a></span>
+      </li>
+      <li>
+        <span class="list1">您有<span class="blue"> {{info?.Model.UnRead}} </span>条新通知！</span>
+        <span class="list2 grey"><a [routerLink]="['unReadNotice']">详细&gt;&gt;</a></span>
+      </li>
+      <li class="lastChild fontSize12 grey">
+        <a [routerLink]="['/modifyPassword']">修改密码</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a [routerLink]="['/changeUser']" id="ctl05_A2">修改信息</a> &nbsp;|&nbsp;
+        <span class="list2" ><a href="/admin/" target="_blank">进入管理控制台</a></span>
+      </li>
+      <li class="lastChild lastChild1">
+        <a class="exit" (click)="loginOut('out')">退出</a>
+        <!--<span class="list1"><a  href="javascript:void();" onclick="loginOut('cancel')">删除账号</a></span>-->
+      </li>
+    </ul>
+  </div>
+</div>

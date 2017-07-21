@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { CommonServiceService } from '../services/common-service.service';
+import { CommonService } from '../services/common-service.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
   firenlyLinkData: any;
   linkNode: any;
 
-  constructor(private service: CommonServiceService) {
+  constructor(private service: CommonService) {
   }
 
   ngOnInit() {

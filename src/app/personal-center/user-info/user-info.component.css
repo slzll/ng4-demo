@@ -1,0 +1,59 @@
+.UserInformation {
+}
+.UserInformation .txt {
+  line-height: 44px;
+  color: #666;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+}
+.UserInformation .loginAfter_ul li {
+  color: #333;
+  height: 40px;
+  line-height: 40px;
+  width: 270px;
+  margin:0 auto;
+  border-bottom: 1px solid #d4d5d7;
+}
+.UserInformation .loginAfter_ul .hours{
+  display: inline-block;
+  width: 110px;
+}
+
+.UserInformation .loginAfter_ul .grey a {
+  color: #666;
+}
+.UserInformation .loginAfter_ul .grey a:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+.UserInformation .list2 {
+  float: right;
+}
+.UserInformation .loginAfter_ul li.lastChild {
+  border-bottom: 0;
+}
+.UserInformation .loginAfter_ul li.lastChild1 {
+  text-align: center;
+}
+.UserInformation .loginAfter_ul .fontSize12 a {
+  font-size: 12px;
+}
+.UserInformation .exit {
+  display: block;
+  margin: 7px auto;
+  width: 80px;
+  height: 26px;
+  background-color: #3a7fb6;
+  text-align: center;
+  line-height: 26px;
+  color: #fff;
+  border-radius: 6px;
+}
+.UserInformation .loginAfter_ul .lastChild .list2 a {
+  color: #076fc7;
+}
+.UserInformation .loginAfter_ul .lastChild .list2 a:hover {
+  color: #333;
+}

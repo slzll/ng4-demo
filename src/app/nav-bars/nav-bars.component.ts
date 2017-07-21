@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonServiceService } from '../services/common-service.service';
+import { CommonService } from '../services/common-service.service';
 
 @Component({
   selector: 'app-nav-bars',
@@ -14,7 +14,7 @@ export class NavBarsComponent implements OnInit {
       UserVisitCount: 0
     }
   };
-  constructor(private service: CommonServiceService) { }
+  constructor(private service: CommonService) { }
 
   ngOnInit() {
     this.service.getData('LeftRealTimeData').then(res => {

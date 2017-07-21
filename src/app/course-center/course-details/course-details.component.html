@@ -1,0 +1,135 @@
+<!--@*课程详情*@-->
+<div class="courseDetails tmBorder-blue">
+  <ol class="breadcrumb">
+    <li class="currentPosition">您的当前位置:</li>
+    <li><a routerLink="/">首页</a></li>
+    <li><a routerLink="courseCenter">课程中心</a></li>
+    <li class="active">{{courseDetailsData.CourseModel.Name}}</li>
+  </ol>
+  <div class="long cur_center">
+    <div class="titlebg2">
+      <div class="txt">
+        课程信息
+      </div>
+    </div>
+    <div class="content cur_detail">
+      <table class="table table-bordered">
+        <tbody>
+        <tr>
+          <td class="listtb1">
+            <span>课程名称：</span>
+          </td>
+          <td class="listtb2 cur_title">
+            <strong>{{courseDetailsData.CourseModel.Name}}</strong>
+            <a *ngIf="courseDetailsData.CourseModel.FavoriteId==0"
+               (click)="favoriteAdd({mainId:courseDetailsData.CourseModel.Id,type:'Course',
+               title:courseDetailsData.CourseModel.Name,remark:'0'},token);"
+               href="javascript:;" class="red favoriteadd">[收藏]</a>
+            <a *ngIf="courseDetailsData.CourseModel.FavoriteId!=0"
+               (click)="favoriteDelete({id:courseDetailsData.CourseModel.FavoriteId},token);"
+               class="red favoritedel">[取消收藏]</a>
+            <!--<div class="preventorgery"></div>-->
+          </td>
+          <td class="listtb3">
+            <span>学员评分：</span>
+          </td>
+          <td class="listtb4">
+            <span class="star" [ngStyle]="{'background-position-x': -courseDetailsData.CourseModel.StudentGrade*121+'px;'}"></span><span style="color:#e20000 !important"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="listtb1">
+            <span>课程分类：</span>
+          </td>
+          <td class="listtb2">
+            <a [routerLink]="['courseCenter2',courseDetailsData.CourseModel.ChannelId]">{{courseDetailsData.CourseModel.ChannelName}}</a>
+          </td>
+          <td class="listtb3">
+            <span>评论：</span>
+          </td>
+          <td class="listtb4"><span>已有<span style="color:#e20000 !important">{{courseDetailsData.Count}}</span>条评论</span></td>
+        </tr>
+        <tr>
+          <td class="listtb1">
+            <span>课程教师：</span>
+          </td>
+          <td class="listtb2">
+            <span>{{courseDetailsData.CourseModel.Teacher}}</span>
+          </td>
+          <td class="listtb3">
+            <span>课程学时：</span>
+          </td>
+          <td class="listtb4"><span style="color:#e20000 !important">{{courseDetailsData.CourseModel.Credit}}</span></td>
+        </tr>
+        <tr>
+          <td class="listtb1">
+            <span>时长：</span>
+          </td>
+          <td class="listtb2">
+            <span style="color:#e20000 !important">{{courseDetailsData.CourseModel.Duration}}</span>
+          </td>
+          <td class="listtb3">
+            <span>参加测试：</span>
+          </td>
+          <td class="listtb4">
+            <a *ngIf="courseDetailsData.CourseModel.ExamId!=0"  (click)="havTest(courseDetailsData.CourseModel.ExamId)" class="red">参加测试</a>
+            <span class="black" *ngIf="courseDetailsData.CourseModel.ExamId">无</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="listtb1">
+            <span>进度：</span>
+          </td>
+          <td class="listtb2">
+            <div class="jindu"><span class="jindubg" [ngStyle]="{'width':courseDetailsData.CourseModel.BrowseScore+'%'}"></span></div>
+            <span *ngIf="courseDetailsData.CourseModel.BrowseScore<=0">0</span>
+            <span *ngIf="courseDetailsData.CourseModel.BrowseScore>0">{{courseDetailsData.CourseModel.BrowseScore}}%</span>
+          </td>
+          <td class="listtb3">
+            <span>播放：</span>
+          </td>
+          <td class="listtb4" >
+            <a *ngIf="courseDetailsData.CourseModel.BrowseScore>=0" href="#/play/play/{{courseDetailsData.CourseModel.Id}}" target="_blank" class="red">播放</a>
+            <a *ngIf="courseDetailsData.CourseModel.BrowseScore < 0" target="_blank" (click)="selectClass(courseDetailsData.CourseModel.Id);" class="red favoritedel">选课并播放</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="listtb1">
+            <span>课程简介：</span>
+          </td>
+          <td colspan="3" class="listtb5">
+            <div class="curinfo">
+              <p *ngIf="courseDetailsData.CourseModel.Description">{{courseDetailsData.CourseModel.Description}}</p>
+              <p *ngIf="!courseDetailsData.CourseModel.Description">无</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="listtb1">
+            <span>课程节点:</span>
+          </td>
+          <td colspan="3" class="listtb5">
+            <div class="jiedian">
+              <div class="bar"><span class="number">节点编号</span><span class="name">节点名称</span><span class="tishi">（注：灰色为已学，红色为未学）</span></div>
+              <div class="jdcontext">
+                <ul class="clearfix">
+                  <li *ngFor="let nodeList of courseDetailsData.ListData">
+                    <span [hidden]="nodeList.IsFinish">
+                      <span class="number" style="color:#e20000 !important">{{nodeList.Code}}</span>
+                      <span class="name" style="color:#e20000 !important">{{nodeList.Name}} </span>
+                    </span>
+                    <span [hidden]="!nodeList.IsFinish">
+                      <span class="number" style="color:#999 !important">{{nodeList.Code}}</span>
+                      <span class="name" style="color:#999 !important">{{nodeList.Name}} </span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
