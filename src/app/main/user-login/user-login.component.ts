@@ -86,76 +86,8 @@ export class UserLoginComponent implements OnInit {
     console.log(this.token);
 
     if (this.login.Account && this.login.PassWord) {
-      // this.service.getData(urlShort, $.extend({},loginParam, this.token))
-      //   .then((data) => {
-      //     if (data.Type == 0) {
-      //       this.showError = true;
-      //     } else if (data.Type == 1) {
-      //       this.showLogin = false;
-      //       // window.location.reload();
-      //       //请求用户信息
-      //       this.service.getData('LoginShort',GlobalConfig.ALL_PORT.LoginShort.data)
-      //         .then(function(response) {
-      //
-      //           // console.log(response);
-      //           this.userMessage = response.Data.Model;
-      //           this.userAllMessage = response.Data;
-      //           if (this.userMessage.Name) {
-      //             this.showLogin = false;
-      //
-      //           } else {
-      //             this.showLogin = true;
-      //             if (this.userMessage.RememberMe) {
-      //               this.login.RememberMe = true;
-      //               this.rememberPW();
-      //             }else {
-      //               this.login = {
-      //                 Account: '',
-      //                 PassWord: ''
-      //               };
-      //             }
-      //           }
-      //         });
-      //     } else if (data.Type == 2) {
-      //       this.service.alertMs("首次登录，请修改密码！");
-      //       this.router.navigate(['modifyPassword']);
-      //
-      //     } else if (data.Type == 3) {
-      //       if (window.confirm("帐号在别的地方登录，是否踢出？")) {
-      //         this.kickOut(data.Message);
-      //         return true;
-      //       } else {
-      //         return false;
-      //       }
-      //     } else if (data.Type == 4) {
-      //       this.service.alertMs("此电脑已经有用户登录，您不能用其他帐号再次登录！");
-      //     } else if (data.Type == 5) {
-      //       this.service.alertMs("平台当前在线人数到达上限，请稍后再试！");
-      //     } else if (data.Type == 6) {
-      //       this.service.alertMs(data.Message);
-      //     } else if (data.Type == 7) {} else if (data.Type == 10) {
-      //       this.service.alertMs("您还不是本平台成员，将为您转向您所在的平台：" + data.Message, 2);
-      //       return;
-      //     } else if (data.Type == 11) {
-      //       this.service.alertMs(data.Message);
-      //     } else if (data.Type == 12 || data.Type == 13) {
-      //       this.service.alertMs(data.Message);
-      //     } else {
-      //
-      //     }
-      //   },(data) => {
-      //     console.log(data)
-      //     alert("登陆异常！");
-      //     // window.location.reload();
-      //   });
-      $.ajax({
-        method:'POST',
-        url:GlobalConfig.ALL_PORT[urlShort].url,
-        data:$.extend({},loginParam,this.token),
-        xhrFields: {
-          withCredentials: true
-        },
-        success:(data)=>{
+/*      this.service.getData(urlShort, $.extend({},loginParam, this.token))
+        .then((data) => {
           if (data.Type == 0) {
             this.showError = true;
           } else if (data.Type == 1) {
@@ -184,6 +116,103 @@ export class UserLoginComponent implements OnInit {
                   }
                 }
               });
+          } else if (data.Type == 2) {
+            this.service.alertMs("首次登录，请修改密码！");
+            this.router.navigate(['modifyPassword']);
+
+          } else if (data.Type == 3) {
+            if (window.confirm("帐号在别的地方登录，是否踢出？")) {
+              this.kickOut(data.Message);
+              return true;
+            } else {
+              return false;
+            }
+          } else if (data.Type == 4) {
+            this.service.alertMs("此电脑已经有用户登录，您不能用其他帐号再次登录！");
+          } else if (data.Type == 5) {
+            this.service.alertMs("平台当前在线人数到达上限，请稍后再试！");
+          } else if (data.Type == 6) {
+            this.service.alertMs(data.Message);
+          } else if (data.Type == 7) {} else if (data.Type == 10) {
+            this.service.alertMs("您还不是本平台成员，将为您转向您所在的平台：" + data.Message, 2);
+            return;
+          } else if (data.Type == 11) {
+            this.service.alertMs(data.Message);
+          } else if (data.Type == 12 || data.Type == 13) {
+            this.service.alertMs(data.Message);
+          } else {
+
+          }
+        },(data) => {
+          console.log(data)
+          alert("登陆异常！");
+          // window.location.reload();
+        });*/
+      $.ajax({
+        method:'POST',
+        url:GlobalConfig.ALL_PORT[urlShort].url,
+        data:$.extend({},loginParam,this.token),
+        xhrFields: {
+          withCredentials: true
+        },
+        success:(data)=>{
+          if (data.Type == 0) {
+            this.showError = true;
+          } else if (data.Type == 1) {
+            this.showLogin = false;
+            // window.location.reload();
+            //请求用户信息
+            $.ajax({
+              method:'post',
+              url:GlobalConfig.ALL_PORT.LoginShort.url,
+              data:GlobalConfig.ALL_PORT.LoginShort.data,
+              xhrFields: {
+                withCredentials: true
+              },
+              success:(response)=>{
+                // console.log(response);
+                this.userMessage = response.Data.Model;
+                this.userAllMessage = response.Data;
+                let name =response.Data.Model.Name;
+                if (name) {
+                  this.showLogin = false;
+
+                } else {
+                  this.showLogin = true;
+                  if (this.userMessage.RememberMe) {
+                    this.login.RememberMe = true;
+                    this.rememberPW();
+                  }else {
+                    this.login = {
+                      Account: '',
+                      PassWord: ''
+                    };
+                  }
+                }
+              }
+            })
+            /*this.service.getData('LoginShort',GlobalConfig.ALL_PORT.LoginShort.data)
+              .then(function(response) {
+
+                // console.log(response);
+                this.userMessage = response.Data.Model;
+                this.userAllMessage = response.Data;
+                if (this.userMessage.Name) {
+                  this.showLogin = false;
+
+                } else {
+                  this.showLogin = true;
+                  if (this.userMessage.RememberMe) {
+                    this.login.RememberMe = true;
+                    this.rememberPW();
+                  }else {
+                    this.login = {
+                      Account: '',
+                      PassWord: ''
+                    };
+                  }
+                }
+              });*/
           } else if (data.Type == 2) {
             this.service.alertMs("首次登录，请修改密码！");
             this.router.navigate(['modifyPassword']);

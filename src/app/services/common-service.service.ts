@@ -246,9 +246,10 @@ export class CommonService {
       method:'get',
       url:GlobalConfig.ALL_PORT.AntiForgeryToken.url,
       data:GlobalConfig.ALL_PORT.AntiForgeryToken.data,
-      headers:{
-        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+      xhrFields: {
+        withCredentials: true
       },
+      contentType:"application/x-www-form-urlencoded;charset=UTF-8",
       success: function(response){
         $('body').append('<div class="preventorgery"></div>');
         $('.preventorgery').html(response.html);
