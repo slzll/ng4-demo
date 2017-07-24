@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {CommonService} from "../../services/common-service.service";
 import {GlobalConfig} from "../../global-config";
 import 'bootstrap';
-
 @Component({
   selector: 'app-my-center',
   templateUrl: './my-center.component.html',
@@ -49,8 +48,7 @@ export class MyCenterComponent implements OnInit {
   selectedName3: string;
   PlanFinishDate2: any;
   RemindDate2: any;
-
-  pageCount=Math.ceil(this.seeNoteData.Count/this.seeNoteData.Rows);
+  pageCount:number;
 
   constructor(private service: CommonService) { }
 
@@ -144,6 +142,7 @@ export class MyCenterComponent implements OnInit {
       .then((response) => {
         response.Data.CourseName = courseName;
         this.seeNoteData = response.Data;
+        this.pageCount=Math.ceil(response.Data.Count/response.Data.Rows)
 
         /*$('.modal').modal('hide');
         alert('添加完成！')*/

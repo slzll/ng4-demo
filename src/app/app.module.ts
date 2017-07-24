@@ -33,6 +33,7 @@ import {AntityForgeryService} from "./services/antity-forgery.service";
 import { UserInfoComponent } from './personal-center/user-info/user-info.component';
 import { PersonalCenterNavComponent } from './personal-center/personal-center-nav/personal-center-nav.component';
 import { MyCenterComponent } from './personal-center/my-center/my-center.component';
+import { UserLoginComponent } from './main/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { MyCenterComponent } from './personal-center/my-center/my-center.compone
     CourseDetailsComponent,
     UserInfoComponent,
     PersonalCenterNavComponent,
-    MyCenterComponent
+    MyCenterComponent,
+    UserLoginComponent
   ],
   imports: [
     CommonModule,
