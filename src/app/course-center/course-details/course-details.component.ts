@@ -25,7 +25,7 @@ export class CourseDetailsComponent implements OnInit {
       this.Id = params['Id'];
     });
     this.service.getData('CourseContent',Object.assign({}, GlobalConfig.ALL_PORT.CourseContent.data, { Id: this.Id }))
-      .then(function(response) {
+      .then((response)=> {
         this.courseDetailsData = response.Data;
       });
   };
@@ -43,8 +43,8 @@ export class CourseDetailsComponent implements OnInit {
   favoriteDelete(options, token) {
     let params = $.extend({}, GlobalConfig.ALL_PORT.FavoriteDelete.data, options, token)
     this.service.getData('FavoriteDelete',params)
-      .then(function(response) {
-        console.log(params);
+      .then((response) =>{
+        // console.log(params);
         if (response.Type == 1) {
           this.courseDetailsData.CourseModel.FavoriteId = 0;
           alert(response.Message);
@@ -55,7 +55,7 @@ export class CourseDetailsComponent implements OnInit {
   selectClass (checkValue) {
     let params = $.extend({}, GlobalConfig.ALL_PORT.AddStudyCourse.data, { checkValue: checkValue }, this.token)
     this.service.getData('AddStudyCourse',params)
-      .then(function(response) {
+      .then((response)=> {
         if (response.Type == 1) {
           window.open('#/play/play/' + checkValue);
         }
@@ -66,7 +66,7 @@ export class CourseDetailsComponent implements OnInit {
   havTest (Id) {
     let params = $.extend({}, GlobalConfig.ALL_PORT.Exam.data, this.token, { parameter1: Id })
     this.service.getData('Exam',params)
-      .then(function(response) {
+      .then((response)=> {
         if (response.Type) {
           //Type存在，意味着不能考试
           alert(response.Message);

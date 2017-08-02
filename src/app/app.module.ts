@@ -34,6 +34,10 @@ import { UserInfoComponent } from './personal-center/user-info/user-info.compone
 import { PersonalCenterNavComponent } from './personal-center/personal-center-nav/personal-center-nav.component';
 import { MyCenterComponent } from './personal-center/my-center/my-center.component';
 import { UserLoginComponent } from './main/user-login/user-login.component';
+import { ArticleCategoryComponent } from './common-problem/article-category/article-category.component';
+import { ArticleListComponent } from './common-problem/article-list/article-list.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { PagationComponent } from './pagation/pagation.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +63,11 @@ import { UserLoginComponent } from './main/user-login/user-login.component';
     UserInfoComponent,
     PersonalCenterNavComponent,
     MyCenterComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    ArticleCategoryComponent,
+    ArticleListComponent,
+    FilterPipe,
+    PagationComponent
   ],
   imports: [
     CommonModule,

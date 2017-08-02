@@ -1,3 +1,11 @@
-<p>
-  common-problem works!
-</p>
+<div class="container_24">
+  <div class="grid_7 mar_top_15">
+    <app-article-category [categoryData]="categoryData" (id)="refreshList($event)"></app-article-category>
+  </div>
+  <div class="grid_17 mar_top_15 pad_left_10">
+    <app-article-list [articleListData]="articleListData" [pagationConf]="paginationConf">
+      <app-pagation (pageConf)="getConf($event)"></app-pagation>
+    </app-article-list>
+
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonService} from "../services/common-service.service";
 
 @Component({
   selector: 'app-personal-center',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalCenterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:CommonService) { }
 
   ngOnInit() {
+    this.service.keepOnline();
   }
 
 }

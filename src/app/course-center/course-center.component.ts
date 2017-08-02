@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {CommonService} from "../services/common-service.service";
-import {Search} from "../Interface/search";
+interface Search {
+  title:string,
+  flag:any,
+  onlineTime:string
+}
 @Component({
   selector: 'app-course-center',
   templateUrl: './course-center.component.html',
@@ -37,7 +41,7 @@ export class CourseCenterComponent implements OnInit{
         // console.log(res.Data.ListData)
         this.courseSupermarketData.splice(index, 0,res.Data);
         this.imgSrc= res.Data.ImageCourse;
-        console.log(this.courseSupermarketData)
+        // console.log(this.courseSupermarketData)
       })
 
   }
@@ -48,7 +52,7 @@ export class CourseCenterComponent implements OnInit{
       this.courseSupermarketData = Array(this.courseSupermarketData);
       this.courseSupermarketData = [];
       this.courseClassify.forEach((item,index) => {
-        console.log(index, item)
+        // console.log(index, item)
         this.searchCourse(index, item);
 
       });

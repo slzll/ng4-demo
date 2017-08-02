@@ -1,0 +1,28 @@
+<div class="articleList border_1 tmBorder-blue">
+  <ol class="breadcrumb">
+    <li class="currentPosition">您的当前位置:</li>
+    <li><a routerLink="/">首页</a></li>
+    <li class="active">文章列表</li>
+  </ol>
+  <div class="articleListSearch">
+    <input type="text" [(ngModel)]="search" my-placeholder placeholder="请输入关键词自动搜索">
+    <!--<input type="button" value="搜索">-->
+  </div>
+  <div>
+    <div class="articleListHeader">
+      <h1>{{articleListData?.CategoryName}}</h1>
+    </div>
+    <table class="table">
+      <tr>
+        <th class="titleName">文章名称</th>
+        <th class="titleDate">发布日期</th>
+      </tr>
+      <tr *ngFor="let listData of articleListData?.ListData | filter:search">
+        <td><img [src]="'assets/images/arrow.png'" alt=""><a [routerLink]="['articleDetail',listData.Id]" target="_blank" title="{{listData?.Name}}">{{listData?.Name}}</a></td>
+        <td class="listDate">{{listData?.CreateDate | dateFilter | date:'yyyy-MM-dd'}}</td>
+      </tr>
+    </table>
+    <ng-content></ng-content>
+    <div [hidden]="search !=''" class="mar_top_5" tm-pagation conf="paginationConf"></div>
+  </div>
+</div>

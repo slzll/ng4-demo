@@ -1,0 +1,17 @@
+<div class="page-list clearfix">
+  <ul class="pagination" [hidden]="!(conf.totalItems > 0)">
+    <li [ngClass]="{disabled: conf.currentPage == 1}" (click)="prevPage()"><span>上一页</span></li>
+    <li *ngFor="let item of pageList"
+        [ngClass]="{active: item == conf.currentPage, separate: item == '...'}"
+        (click)="changeCurrentPage(item)">
+        <span>{{ item }}</span>
+    </li>
+    <li [ngClass]="{disabled: conf.currentPage == conf.numberOfPages}" (click)="nextPage()"><span>下一页</span></li>
+  </ul>
+  <div class="page-total" [hidden]="!(conf.totalItems > 0)">
+    <span>/共<strong>{{ conf.totalItems }}</strong>条 &nbsp;跳转至</span>
+    <input name="page" type="text" [(ngModel)]="jumpPageNum" (keyup)="jumpPageKeyUp($event)"/>
+    <button class="btn btn-default" (click)="jumpToPage()">Go</button>
+  </div>
+  <div class="no-items" [hidden]="!(conf.totalItems <= 0)">暂无数据</div>
+</div>

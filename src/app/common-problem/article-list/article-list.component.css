@@ -1,0 +1,47 @@
+.articleList .titleName{
+  width: 500px;
+}
+.articleList th{
+  font-weight: bold;
+}
+.articleList td img{
+  margin: 0 10px;
+}
+.articleList td a{
+  display: inline-block;
+  width: 458px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.articleList td img,.articleList td a{
+  vertical-align: middle;
+}
+.articleList .titleName,.articleList .titleDate,.articleList .listDate{
+  text-align: center;
+}
+.articleListSearch{
+  margin-left: 40px;
+  margin-bottom: 20px;
+  line-height: 26px;
+}
+.articleListSearch input[type="text"]{
+  width: 300px;
+  padding-left: 10px;
+}
+.articleListSearch input[type="button"]{
+  padding: 0 10px;
+
+}
+.articleListSearch input[type="text"],
+.articleListSearch input[type="button"]{
+  border-radius: 5px;
+  outline: none;
+  border:1px solid #e5e5e5;
+}
+.articleListHeader > h1{
+  line-height:49px;
+  padding-left: 49px;
+  font-size: 22px;
+  color: #000;
+}

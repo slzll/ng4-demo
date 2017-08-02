@@ -1,0 +1,11 @@
+<div class="articleCategory border_1 tmBorder-blue">
+  <div class="articleCategoryTitle" >
+    <h1>{{categoryData?.TitleNav}}</h1>
+  </div>
+  <ul>
+    <li *ngFor="let categoryData of categoryData?.ListData">
+      <a class="btn" title="{{categoryData?.Name}}" (click)="refreshList(categoryData?.Id)">{{categoryData?.Name}}</a>
+    </li>
+  </ul>
+</div>
+

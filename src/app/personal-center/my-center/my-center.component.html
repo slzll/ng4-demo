@@ -7,7 +7,7 @@
   </ol>
   <form class="form-inline formCourse">
     <select name="selectedName" class="form-control" [(ngModel)]="selectedName" (ngModelChange)="selectChangeFun(selectedName.id)">
-      <option *ngFor="let item of courseStatus" [ngValue]="item.name"></option>
+      <option *ngFor="let item of courseStatus" [ngValue]="item">{{item.name}}</option>
     </select>
     <div class="form-group">
       <input name="searchTitle" [(ngModel)]="searchTitle" type="text" class="form-control"

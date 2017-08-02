@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { GlobalConfig } from '../global-config';
 import { API } from '../api'
-import { Http, Headers, URLSearchParams } from '@angular/http';
+import {Http, Headers, URLSearchParams, RequestOptions} from '@angular/http';
 import 'rxjs/Rx';
 import {unescape} from "querystring";
 import { CookieService } from 'ngx-cookie';
@@ -145,8 +145,9 @@ export class CommonService {
   //退出
   loginOut (str) {
     let headers={"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"};
-    this.getData('LoginOut',Object.assign({},GlobalConfig.ALL_PORT.LoginOut.data,this.antiForgeryToken.AntiForgeryToken()),headers)
-      .then(function(response){
+    let token = this.AntiForgeryToken();
+    this.getData('LoginOut',$.extend({},GlobalConfig.ALL_PORT.LoginOut.data,token),headers)
+      .then((response) => {
       this.router.navigate(['/']);
       window.location.reload();
     })
@@ -233,16 +234,15 @@ export class CommonService {
         }
       }
     }
+    let options = new RequestOptions({headers:header,withCredentials: true })
 
-
-
-    return this.http.post(GlobalConfig.ALL_PORT[url].url, params, header).map(res => res.json()).toPromise();
+    return this.http.post(GlobalConfig.ALL_PORT[url].url, params, options).map(res => res.json()).toPromise();
   }
 
   //防伪造请求
   AntiForgeryToken () {
     let token = new Object();
-    $.ajax({
+/*    $.ajax({
       method:'get',
       url:GlobalConfig.ALL_PORT.AntiForgeryToken.url,
       data:GlobalConfig.ALL_PORT.AntiForgeryToken.data,
@@ -260,9 +260,9 @@ export class CommonService {
         return token;
       }
     })
-    return token;
-/*    this.getData('AntiForgeryToken',GlobalConfig.ALL_PORT.AntiForgeryToken.data,{"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"})
-      .then(function(response){
+    return token;*/
+    this.getData('AntiForgeryToken',GlobalConfig.ALL_PORT.AntiForgeryToken.data,{"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"})
+      .then((response)=>{
       $('body').append('<div class="preventorgery"></div>');
       $('.preventorgery').html(response.html);
       let value = $('.preventorgery input').val();
@@ -271,7 +271,7 @@ export class CommonService {
       $('div.preventorgery').remove();
       return token;
     });
-    return token;*/
+    return token;
   }
 
   dFormat(i) { return i < 10 ? "0" + i.toString() : i; }

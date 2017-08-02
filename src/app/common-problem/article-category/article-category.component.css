@@ -1,0 +1,33 @@
+.articleCategoryTitle{
+  border-bottom: 2px solid #e20000;
+}
+.articleCategory > ul{
+  overflow: hidden;
+  padding: 0 30px;
+  margin: 12px 0;
+}
+.articleCategory > ul > li{
+  width: 82px;
+  height: 38px;
+  float: left;
+  margin: 0  12px;
+  margin-bottom: 25px;
+}
+.articleCategory > ul > li > a.btn{
+  display: inline-block;
+  width: 95px;
+  height: 38px;
+  line-height: 24px;
+  margin: 0 10px;
+  text-align: center;
+  color: #333;
+  background: rgb(221,221,221);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.articleCategoryTitle > h1{
+  font-size: 22px;
+  line-height: 49px;
+  text-align: center;
+}
