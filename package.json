@@ -36,7 +36,7 @@
     "@types/jasmine": "2.5.38",
     "@types/jquery": "^2.0.42",
     "@types/node": "~6.0.60",
-    "bootstrap": "^3.2.0",
+    "bootstrap": "^3.4.1",
     "bootstrap-loader": "^2.1.0",
     "codelyzer": "~2.0.0",
     "eonasdan-bootstrap-datetimepicker": "*",
